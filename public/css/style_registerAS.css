@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c2534;
+    height: 100%;
+  }
+  
+  .dog1 {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+  
+  .dog2 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+  }
+  
+  .signin-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .signin-header-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4rem;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  .signin-buttons-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .signin-breeder-wrapper, .signin-customer-wrapper {
+    margin: 1rem 2rem;
+  }
+  
+  .signin-btn {
+    background-color: #af08fc;
+    color: #fff;
+    padding: .5rem;
+    border-radius: .5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .signin-customer-text, .signin-breeder-text {
+    color: #fff;
+    text-align: center;
+    font-kerning: 4px;
+    letter-spacing: 2px;
+  }
+  .login-section .text-create-account {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+    margin-top: 3.5rem;
+ }
+ 
+ .login-section .text-create-account .text-sign-up {
+    text-decoration: none;
+    color: #af08fc;
+ }
+  
