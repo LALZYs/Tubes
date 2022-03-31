@@ -16,9 +16,7 @@
     </div>
     
     <div class="signin-buttons-wrapper">
-      <div class="signin-breeder-wrapper">
-        <button class="signin-btn" onclick="window.location.href='register.php'">Admin Register</button>
-      </div>
+      
       <div class="signin-breeder-wrapper">
         <button class="signin-btn" onclick="window.location.href='registerTourist.php'">Tourist Register</button>
        </div> 
