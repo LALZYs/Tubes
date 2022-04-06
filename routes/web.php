@@ -24,3 +24,7 @@ Route::get('/login', function () {
 Route::get('/register', function () {
     return view('RegisterAS');
 })->name('register');
+
+Route::get('/admin', function () {
+    return view('RegisterAS');
+})->name('register');
