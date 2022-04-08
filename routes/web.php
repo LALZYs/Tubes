@@ -27,7 +27,7 @@ Route::get('/register', function () {
 })->name('register');
 
 Route::get('/ladmin', function () {
-    return view('login.formlogin');
+    return view('login.ladmin');
 })->name('ladmin');
 
 Route::get('/radmin', function () {
