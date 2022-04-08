@@ -13,7 +13,7 @@
           <li><a href="#section-2">About Us</a></li>
           <li><a href="#section-9">Contact</a></li>
           <li><a href="{{route('register')}}">Register</a></li>
-          <li><a href="{{ route('login') }}"> Login</a></li>
+          <li><a href="{{route('login')}}"> Login</a></li>
           <li><a href="#"><span class="fa fa-shopping-cart"></span></a></li>
           <li><a href="#"><span class="fa fa-search"></span></a></li>
         </ul>
@@ -51,14 +51,6 @@
           </div>
         </div>
       </div>
-      <nav>
-        <div class="controls">
-          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> Intro</label>
-          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> Work</label>
-          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> About</label>
-          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> Contacts</label>
-        </div>
-      </nav>
     </div>
   </section>
 </body>

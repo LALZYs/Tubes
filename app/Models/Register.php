@@ -37,4 +37,35 @@ class Register extends Model
         $this->$asalkota = $asalkota;
     }
 
+    public function get_admin(){
+        return[
+            'nama'=>$this->$nama,
+            'username'=>$this->$username,
+            'password'=>$this->$password,
+            'phonenumber'=>$this->$phonenumber,
+            'email'=>$this->$email,
+            'kode unik'=>$this->$kodeunik
+        ];
+    }
+
+    public function get_tourist(){
+        return[
+        'nama'=>$this->$nama,
+        'username'=>$this->$username,
+	    'password'=>$this->$password,
+	    'phonenumber'=>$this->$phonenumber,
+	    'email'=>$this->$email,
+        ];
+    }
+
+    public function get_tourguide(){
+        return[
+            'nama'=>$this->$nama ,
+            'username'=>$this->$username,
+            'password'=>$this->$password,
+            'phonenumber'=>$this->$phonenumber,
+            'email'=>$this->$email,
+            'asalkota'=>$this->$asalkota,
+        ];
+    }
 }

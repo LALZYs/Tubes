@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\LoginController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,17 +15,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('layout.index');
 })->name('index');
 
 Route::get('/login', function () {
-    return view('LoginAS');
+    return view('login.LoginAS');
 })->name('login');
 
 Route::get('/register', function () {
-    return view('RegisterAS');
+    return view('register.RegisterAS');
 })->name('register');
 
-Route::get('/admin', function () {
-    return view('RegisterAS');
-})->name('register');
+Route::get('/ladmin', function () {
+    return view('login.formlogin');
+})->name('ladmin');
+
+Route::get('/radmin', function () {
+    return view('register.radmin');
+})->name('radmin');
+
+
+
+
+
+
+Route::get('/registadmin',[RegisterController::class, 'index']);
+
+Route::get('/loginadmin',[LoginController::class, 'index']);
+
