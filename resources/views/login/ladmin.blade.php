@@ -29,14 +29,14 @@
             </div>
             <div class="form-group">
                <label for="kodeunik">Unique Code</label>
-               <input type="kodeunik" class="form-input" name="kodeunik" placeholder="Enter your password" id="kodeunik">
+               <input type="kodeunik" class="form-input" name="kodeunik" placeholder="Enter your unique code" id="kodeunik">
             </div>
             <button type="submit" name="submit" class="btn">Log in</button>
          </form>
       </div>
       <!-- Text create account -->
       <p class="text-create-account">Don't have an account? <a href="{{route('register')}}" class="text-sign-up">Register</a></p>
-      <p class="text-create-account">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
+      <p class="text-create-account">Back To <a href="{{route('login')}}" class="text-sign-up">Login page</a></p>
    </section>
 </body>
 

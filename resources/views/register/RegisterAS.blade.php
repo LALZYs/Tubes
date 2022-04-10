@@ -20,14 +20,13 @@
       <a href="{{ url('radmin') }}" class="signin-btn">Admin Register</a>
       </div>
       <div class="signin-breeder-wrapper">
-        <button class="signin-btn" onclick="window.location.href='registerTourist.php'">Tourist Register</button>
+      <a href="" class="signin-btn">Tourist Register</a>
        </div> 
       <div class="signin-customer-wrapper">
-        <button class="signin-btn" onclick="window.location.href='registerTourguide.php'">Tourguide Register</button>
+      <a href="" class="signin-btn">Tourguide Register</a>
       </div>
     </div>
     <p class="signin-customer-text">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
-       
   </div>
 </body>
 </html>
