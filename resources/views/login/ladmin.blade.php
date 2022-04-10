@@ -39,5 +39,4 @@
       <p class="text-create-account">Back To <a href="{{route('login')}}" class="text-sign-up">Login page</a></p>
    </section>
 </body>
-
 </html>

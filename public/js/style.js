@@ -14,6 +14,7 @@
   });
 
 
+
 ///// Anchor Smooth Scroll /////
 //   $('.main-menu a, .learn-more-button a').click(function(e){
     

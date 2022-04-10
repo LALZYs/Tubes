@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2c2534;
+    height: 100%;
+  }
+  .about-container {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about-header-wrapper {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1.4rem;
+    color: #fff;
+    justify-content: center;
+    text-transform: uppercase;
+  }
+  
+  .about-breeder-wrapper {
+    margin: 1rem 2rem;
+    color: #fff;
+    text-align: justify;
+  }
