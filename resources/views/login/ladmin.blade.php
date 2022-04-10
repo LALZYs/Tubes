@@ -8,7 +8,7 @@
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link rel="preload" as="style"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css\style.css">
    <title>Login Form</title>
 </head>
 
@@ -32,7 +32,7 @@
       </div>
       <!-- Text create account -->
       <p class="text-create-account">Don't have an account? <a href="RegisterAS.html" class="text-sign-up">Register</a></p>
-      <p class="text-create-account">Back To <a href="index.html" class="text-sign-up">Homepage</a></p>
+      <p class="text-create-account">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
    </section>
 </body>
 

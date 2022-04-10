@@ -17,13 +17,13 @@
     
     <div class="signin-buttons-wrapper">
       <div class="signin-breeder-wrapper">
-      <button class="signin-btn" onclick="{{ Redirect::to('ladmin') }}">Admin</button>
+      <a href="{{ url('ladmin') }}" class="signin-btn">Admin</a>
       </div>
       <div class="signin-breeder-wrapper">
-        <button class="signin-btn" onclick="window.location.href='login.php'">Tourist </button>
+      <a href="{{ url('ladmin') }}" class="signin-btn">Tourist</a>
        </div> 
       <div class="signin-customer-wrapper">
-        <button class="signin-btn" onclick="window.location.href='login.php'">Tourguide </button>
+      <a href="{{ url('ladmin') }}" class="signin-btn">Tourguide</a>
       </div>
     </div>
     <p class="signin-customer-text">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>

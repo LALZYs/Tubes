@@ -1,41 +1,3 @@
-<?php 
- 
-include 'config.php';
- 
-error_reporting(0);
- 
-session_start();
- 
-if (isset($_SESSION['username'])) {
-    header("Location: index.php");
-}
-
-if (isset ($_POST['submit'])) {
-    echo "eroror";
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    $email = $_POST['email'];
-    $PhoneNumber = $_POST['Phone Number'];
- 
-    $sql = "SELECT * FROM users WHERE email='$email'";
-    $result = mysqli_query($conn, $sql);
-    if (!$result->num_rows > 0) {
-        $sql = "INSERT INTO users (username, email, password)
-                VALUES ('$username', '$email', '$password')";
-        $result = mysqli_query($conn, $sql);
-        if ($result) {
-            echo "<script>alert('Selamat, registrasi berhasil!')</script>";
-            header("Location: index.html");
-        } else {
-            echo "<script>alert('Woops! Terjadi kesalahan.')</script>";
-        }
-    } else {
-        echo "<script>alert('Woops! Email Sudah Terdaftar.')</script>";
-    }
-}
- 
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +8,7 @@ if (isset ($_POST['submit'])) {
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link rel="preload" as="style"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css\style.css">
    <title>Register Form</title>
 </head>
 
@@ -80,7 +42,7 @@ if (isset ($_POST['submit'])) {
             <button type="submit" name="submit" class="btn">Register</button>
          </form>
       </div>
-      <p class="text-create-account">Back To <a href="RegisterAS.html" class="text-sign-up">Registerpage</a></p>
+      <p class="text-create-account">Back To <a href="{{route('register')}}" class="text-sign-up">Registerpage</a></p>
    </section>
 
 </body>

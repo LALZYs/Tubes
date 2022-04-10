@@ -1,0 +1,182 @@
+:root {
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semi-bold: 600;
+ }
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ html {
+    font-size: 62.5%;
+ }
+ 
+ html,
+ body {
+    height: 100%;
+ }
+ 
+ body {
+    background-color: #2c2534;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-regular);
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ 
+ .login-section {
+    width: 100%;
+    padding: 0 2rem;
+ }
+ 
+ .card-login {
+    background-color: #302938;
+    max-width: 42.5rem;
+    margin: 0 auto;
+    padding: 4.5rem 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 8px 16px rgba(42, 35, 50, 0.3);
+ }
+ 
+ .card-login h3 {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 24px;
+    opacity: 90%;
+    text-align: center;
+ }
+ 
+ .card-login .login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+ }
+ 
+ .card-login .login-options .login-box {
+    flex: 1;
+    background-color: #352e3d;
+    color: #d3cbdb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-semi-bold);
+    line-height: 19px;
+    transition: background-color 0.4s;
+ }
+ 
+ .card-login .login-options .login-box:hover {
+    background-color: #2d2733;
+ }
+ 
+ .login-options .login-box:first-child {
+    margin-right: 0.6rem;
+ }
+ 
+ .login-options .login-box:last-child {
+    margin-left: 0.6rem;
+ }
+ 
+ .login-options .login-box img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 0.8rem;
+ }
+ 
+ .card-login .or {
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+ }
+ 
+ .card-login .form {
+    width: 100%;
+    margin-top: 2rem;
+ }
+ 
+ .card-login .form .form-group {
+    margin-bottom: 2rem;
+ }
+ 
+ .card-login .form label {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: medium;
+    color: #ffffff;
+    opacity: 90%;
+    margin-bottom: 0.5rem;
+ }
+ 
+ .card-login .form .form-input {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    outline: none;
+    background-color: #352e3d;
+    color: #d3cbdb;
+    border: 1px solid rgba(211, 203, 219, 0.1);
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+    transition: border-color 0.15s;
+ }
+ 
+ .card-login .form .form-input::placeholder {
+    font-size: 1.35rem;
+    color: #d3cbdb;
+    opacity: 50%;
+ }
+ 
+ .card-login .form .form-input:focus {
+    border-color: rgba(211, 203, 219, 0.25);
+ }
+ 
+ .card-login .form .btn {
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: #8e80f5;
+    color: #ffffff;
+    padding: 1.2rem 1rem;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-medium);
+    user-select: none;
+    -webkit-user-select: none;
+    margin-top: 3rem;
+    transition: background 0.3s;
+ }
+ 
+ .card-login .form .btn:hover {
+    background: #7260f5;
+ }
+ 
+ .login-section .text-create-account {
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: var(--font-weight-medium);
+    margin-top: 3.5rem;
+ }
+ 
+ .login-section .text-create-account .text-sign-up {
+    text-decoration: none;
+    color: #af08fc;
+ }
+ 

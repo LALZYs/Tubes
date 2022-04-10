@@ -17,7 +17,7 @@
     
     <div class="signin-buttons-wrapper">
       <div class="signin-breeder-wrapper">
-      <button class="signin-btn" onclick="{{ Redirect::to('radmin') }}">Admin Register</button>
+      <a href="{{ url('radmin') }}" class="signin-btn">Admin Register</a>
       </div>
       <div class="signin-breeder-wrapper">
         <button class="signin-btn" onclick="window.location.href='registerTourist.php'">Tourist Register</button>
@@ -26,7 +26,7 @@
         <button class="signin-btn" onclick="window.location.href='registerTourguide.php'">Tourguide Register</button>
       </div>
     </div>
-    <p class="signin-customer-text">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
+    <p class="signin-customer-text">Back To <a href="{{route('register')}}" class="text-sign-up">Homepage</a></p>
        
   </div>
 </body>
