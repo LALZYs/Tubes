@@ -34,6 +34,9 @@ Route::get('/radmin', function () {
     return view('register.radmin');
 })->name('radmin');
 
+Route::get('/about', function () {
+    return view('about.about');
+})->name('about');
 
 
 

@@ -10,7 +10,7 @@
       <div class="main-logo">TripKUY</div>
       <nav>
         <ul class="main-menu">
-          <li><a href="#section-2">About Us</a></li>
+          <li><a href="{{route('about')}}">About Us</a></li>
           <li><a href="#section-9">Contact</a></li>
           <li><a href="{{route('register')}}">Register</a></li>
           <li><a href="{{route('login')}}"> Login</a></li>
