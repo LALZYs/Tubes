@@ -18,7 +18,8 @@
       <div class="card-login">
           <h3>Register</h3>
          <!-- signup form -->
-         <form class="form" action="./register.php" method="POST">
+         <form class="form" action="/radmin" method="POST">
+            @csrf
             <div class="form-group">
                <label for="text">Username</label>
                <input type="text" class="form-input" name="username" placeholder="Enter your username" id="text">
@@ -33,11 +34,11 @@
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
-                <input type="phone" class="form-input" name="phonenumber" placeholder="Enter your phone number" id="phone">
+                <input type="phone" class="form-input" name="phone_number" placeholder="Enter your phone number" id="phone">
             </div>
             <div class="form-group">
                 <label for="uniquecode">Unique Code</label>
-                <input type="uniquecode" class="form-input" name="uniquecode" placeholder="Enter your unique code" id="uniquecode">
+                <input type="uniquecode" class="form-input" name="unique_code" placeholder="Enter your unique code" id="uniquecode">
             </div>
             <button type="submit" name="submit" class="btn">Register</button>
          </form>

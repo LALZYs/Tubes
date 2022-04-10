@@ -1,8 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\RadminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LadminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,16 +39,14 @@ Route::get('/about', function () {
     return view('about.about');
 })->name('about');
 
-Route::get('/lasadmin', function () {
-    return view('login.lasadmin');
-})->name('lasadmin');
 
 
 
 
 
+Route::post('/home',[LoginController::class,'gin']);
+Route::post('/radmin',[RadminController::class,'store']);
+Route::post('/ladmin',[LadminController::class,'store']);
 
-Route::get('/registadmin',[RegisterController::class, 'index']);
 
-Route::get('/loginadmin',[LoginController::class, 'index']);
 

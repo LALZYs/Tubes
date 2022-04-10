@@ -6,13 +6,11 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function index(){
-    $user = DB::table('user')->where('username', 'John')->first();
- 
-    return $user->unique_code;
-    $unique_code = $request->unique_code;
-    }
-    public function validate(){
-        
+    function gin(Request $req){
+        if ($req->username == 'admin' && $req->password == 'bebas' && $req->kodeunik == 'LAL'){
+            session(['login' => $req->username]);
+            return redirect ('/');
+        }
+        return redirect('/login');
     }
 }
