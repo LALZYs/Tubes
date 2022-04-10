@@ -27,11 +27,15 @@
                <label for="password">Password</label>
                <input type="password" class="form-input" name="password" placeholder="Enter your password" id="password">
             </div>
+            <div class="form-group">
+               <label for="kodeunik">Unique Code</label>
+               <input type="kodeunik" class="form-input" name="kodeunik" placeholder="Enter your password" id="kodeunik">
+            </div>
             <button type="submit" name="submit" class="btn">Log in</button>
          </form>
       </div>
       <!-- Text create account -->
-      <p class="text-create-account">Don't have an account? <a href="RegisterAS.html" class="text-sign-up">Register</a></p>
+      <p class="text-create-account">Don't have an account? <a href="{{route('register')}}" class="text-sign-up">Register</a></p>
       <p class="text-create-account">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
    </section>
 </body>

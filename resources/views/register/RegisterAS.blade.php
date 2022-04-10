@@ -26,7 +26,7 @@
         <button class="signin-btn" onclick="window.location.href='registerTourguide.php'">Tourguide Register</button>
       </div>
     </div>
-    <p class="signin-customer-text">Back To <a href="{{route('register')}}" class="text-sign-up">Homepage</a></p>
+    <p class="signin-customer-text">Back To <a href="{{route('index')}}" class="text-sign-up">Homepage</a></p>
        
   </div>
 </body>
