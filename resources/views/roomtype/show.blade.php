@@ -6,7 +6,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{url('admin/roomtype')}}" class="float-right btn btn-success btn-sm">View All</a>
+                <a href="{{url('admin/roomtype')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">                    
@@ -34,11 +34,6 @@
                         <tr>
                             <th>Tourguide</th>
                             <td>{{$data->tourguide}}</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <input type="submit" class="btn btn-primary" />
-                            </td>
                         </tr>
                     </table>
                 </div>
