@@ -36,11 +36,12 @@ class LadminController extends Controller
     public function store(Request $req)
     {   
   
-        $respons= Admin::where('username','=','lalzy')->get();
-       
-        dd($respons);
+        $respons= Admin::where('username','=',$req->username)->first();
         if($respons){
-            if($respons->username== $req->username && $respons->password== $req->password && $respons->unique_code== $req->kodeunik){
+            if($respons->username== $req->username && $respons->password== $req->password && $respons->unique_code== $req->kodeunik)
+            {
+                session(['username' => $respons->username,'uniquecode' => $respons->unique_code]);
+                
                 return redirect('/');
             }
             
