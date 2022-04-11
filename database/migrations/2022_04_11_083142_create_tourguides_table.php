@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('email');
             $table->string('phone_number');
-            $table->string('asa_kota');
+            $table->string('asal_kota');
             $table->timestamps();
         });
     }
