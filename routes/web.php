@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadminController;
+use App\Http\Controllers\RtourguideController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LadminController;
 use App\Http\Controllers\RoomController;
@@ -41,6 +42,10 @@ Route::get('/radmin', function () {
     return view('register.radmin');
 })->name('radmin');
 
+Route::get('/rtourguide', function () {
+    return view('register.rtourguide');
+})->name('rtourguide');
+
 Route::get('/about', function () {
     return view('about.about');
 })->name('about');
@@ -51,6 +56,7 @@ Route::get('/loggedmin', function () {
 
 
 Route::post('/radmin',[RadminController::class,'store']);
+Route::post('/rtourguide',[RtourguideController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
 
 Route::get('admin', function () {
