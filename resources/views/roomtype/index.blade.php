@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('loggedmin.layout')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -6,8 +6,8 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">RoomTypes
-                    <a href="{{ url('admin/roomtype/create') }}" class="float-right btn btn-success btn-sm">Add New</a>
+                <h6 class="m-0 font-weight-bold text-primary">Tempat Pariwisata
+                    <a href="{{ url('admin/roomtype/create') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
                 </h6>
             </div>
             <div class="card-body">
@@ -15,26 +15,34 @@
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Title</th>
+                                <th> No </th>
+                                <th>Nama Tempat</th>
+                        
+                                <th>Deskripsi</th>
+                              
+                                <th>Lokasi</th>
+                               
+                                <th>Tarif</th>
+                               
+                                <th>Catering</th>
+                               
+                                <th>Tourguide</th>
                                 <th>Action</th>
-
                             </tr>
-                        </thead>
-                        <tfoot>
-                            <tr>
-                                <th>#</th>
-                                <th>Title</th>
-                                <th>Action</th>
-
-                            </tr>
+                            
+                            
                         </tfoot>
                         <tbody>
                             @if ($data)
                                 @foreach ($data as $d)
                                     <tr>
                                         <td>{{ $d->id }}</td>
-                                        <td>{{ $d->title }}</td>
+                                        <td>{{ $d->nama_tempat }}</td>
+                                        <td>{{ $d->deskripsi }}</td>
+                                        <td>{{ $d->lokasi }}</td>
+                                        <td>{{ $d->tarif }}</td>
+                                        <td>{{ $d->catering }}</td>
+                                        <td>{{ $d->tourguide }}</td>
                                         <td>
                                             <a href="{{ url('admin/roomtype/' . $d->id) }}" class="btn btn-info btn-sm">
                                                 <i class="fa fa-eye"></i></a>

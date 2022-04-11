@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('loggedmin.layout')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -12,12 +12,28 @@
                 <div class="table-responsive">                    
                     <table class="table table-bordered">
                         <tr>
-                            <th>Title</th>
-                            <td>{{$data->title}}</td>
+                            <th>Nama Tempat</th>
+                            <td>{{$data->nama_tempat}}</td>
                         </tr>
                         <tr>
-                            <th>Detail</th>
-                            <td>{{$data->detail}}</td>
+                            <th>Deskripsi</th>
+                            <td>{{$data->deskripsi}}</td>
+                        </tr>
+                        <tr>
+                            <th>Lokasi</th>
+                            <td>{{$data->lokasi}}</td>
+                        </tr>
+                        <tr>
+                            <th>Tarif</th>
+                            <td>{{$data->tarif}}</td>
+                        </tr>
+                        <tr>
+                            <th>Catering</th>
+                            <td>{{$data->catering}}</td>
+                        </tr>
+                        <tr>
+                            <th>Tourguide</th>
+                            <td>{{$data->tourguide}}</td>
                         </tr>
                         <tr>
                             <td colspan="2">

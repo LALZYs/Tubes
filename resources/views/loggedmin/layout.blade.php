@@ -29,10 +29,11 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        
+        <ul style="background-color: #2c2534;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i img src="img/logo_biru.png" alt="TAK DE"></i>
                 </div>
@@ -54,7 +55,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Masters
+               Menu
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -67,50 +68,15 @@
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ url('admin/roomtype/create') }}">Add New</a>
-                        <a class="collapse-item" href="{{ url('admin/roomtype') }}">View All</a>
+                        <a class="collapse-item" href="{{ url('admin/roomtype/create') }}">Tambah Baru</a>
+                        <a class="collapse-item" href="{{ url('admin/roomtype') }}">Tampilkan Semua</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Room Master -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#roomMaster"
-                    aria-expanded="true" aria-controls="collapseTwo">
-                    <i class="fas fa-fw fa-box"></i>
-                    <span>Room</span>
-                </a>
-                <div id="roomMaster" class="collapse" aria-labelledby="headingTwo"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{ url('admin/room/create') }}">Add New</a>
-                        <a class="collapse-item" href="{{ url('admin/room') }}">View All</a>
-                    </div>
-                </div>
-            </li>
+        
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-
-            <!-- Nav Item - Charts -->
-            <li class="nav-item">
-                <a class="nav-link" href="charts.html">
-                    <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
-            </li>
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
+         
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -332,11 +298,11 @@
                 </nav>
                 <!-- End of Topbar -->
 
-
+                @yield('content')
 
             </div>
             <!-- End of Main Content -->
-            @yield('content')
+          
           
     
             <!-- End of Footer -->

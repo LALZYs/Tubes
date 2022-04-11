@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LadminController;
+use App\Http\Controllers\RoomController;
+use App\Http\Controllers\RoomtypeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -47,5 +49,15 @@ Route::get('/loggedmin', function () {
 Route::post('/radmin',[RadminController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
 
+Route::get('admin', function () {
+    return view('dashboard');
+});
+//  roomType route
+Route::get('admin/roomtype/{id}/delete', [RoomtypeController::class, 'destroy']);
+Route::resource('admin/roomtype', RoomtypeController::class);
+
+//  room route
+Route::get('admin/room/{id}/delete', [RoomController::class, 'destroy']);
+Route::resource('admin/room', RoomController::class);
 
 

@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('loggedmin.layout')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
