@@ -9,7 +9,7 @@
    <link rel="preload" as="style"
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="css\style.css">
-   <title>Login Form</title>
+   <title>Login As Admin</title>
 </head>
 
 <body>

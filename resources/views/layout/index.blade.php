@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <head>
+  
+    <title>TripKUY</title>
     <link rel="stylesheet" href="{{asset('css\style_index.css')}}">
     <link rel="script" href="{{asset('js\style.js')}}">
 </head>

@@ -40,7 +40,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/loggedmin', function () {
-    return view('layout.loggedmin');
+    return view('loggedmin.layout');
 })->name('loggedmin');
 
 
