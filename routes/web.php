@@ -39,9 +39,13 @@ Route::get('/about', function () {
     return view('about.about');
 })->name('about');
 
+Route::get('/loggedmin', function () {
+    return view('layout.loggedmin');
+})->name('loggedmin');
+
 
 Route::post('/radmin',[RadminController::class,'store']);
-Route::post('/ladmin',[LadminController::class,'store']);
+Route::post('/loggedmin',[LadminController::class,'store']);
 
 
 

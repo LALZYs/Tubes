@@ -42,7 +42,7 @@ class LadminController extends Controller
             {
                 session(['username' => $respons->username,'uniquecode' => $respons->unique_code]);
                 
-                return redirect('/');
+                return redirect('/loggedmin');
             }
             
         }
