@@ -33,6 +33,10 @@ Route::get('/ladmin', function () {
     return view('login.ladmin');
 })->name('ladmin');
 
+Route::get('/ltourguide', function () {
+    return view('login.ltourguide');
+})->name('ltourguide');
+
 Route::get('/radmin', function () {
     return view('register.radmin');
 })->name('radmin');
