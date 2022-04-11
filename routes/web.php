@@ -40,11 +40,6 @@ Route::get('/about', function () {
 })->name('about');
 
 
-
-
-
-
-Route::post('/home',[LoginController::class,'gin']);
 Route::post('/radmin',[RadminController::class,'store']);
 Route::post('/ladmin',[LadminController::class,'store']);
 
