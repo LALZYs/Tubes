@@ -18,7 +18,7 @@
       <div class="card-login">
         <h3>TripKUY</h3>
          <!-- login form -->
-         <form class="form" action="/loggedmin" method="post">
+         <form class="form" action="/loggedtour" method="post">
             @csrf
             <div class="form-group">    
                <label for="text">Username</label>
