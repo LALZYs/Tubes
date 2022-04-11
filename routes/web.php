@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadminController;
 use App\Http\Controllers\RtourguideController;
+use App\Http\Controllers\LtourguideController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LadminController;
 use App\Http\Controllers\RoomController;
@@ -54,10 +55,16 @@ Route::get('/loggedmin', function () {
     return view('loggedmin.layout');
 })->name('loggedmin');
 
+Route::get('/loggedtour', function () {
+    return view('loggedtour.halamantg');
+})->name('loggedtour');
+
+
 
 Route::post('/radmin',[RadminController::class,'store']);
 Route::post('/rtourguide',[RtourguideController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
+Route::post('/loggedtour',[LtourguideController::class,'store']);
 
 Route::get('admin', function () {
     return view('dashboard');
