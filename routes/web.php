@@ -72,8 +72,5 @@ Route::get('admin', function () {
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 
-//  room route
-Route::get('admin/room/{id}/delete', [RoomController::class, 'destroy']);
-Route::resource('admin/room', RoomController::class);
 
 
