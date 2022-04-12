@@ -32,7 +32,7 @@
 
             
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('loggedmin')}}">
                
                 <div class="sidebar-brand-text mx-3">TripKUY</div>
             </a>
