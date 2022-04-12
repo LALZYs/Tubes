@@ -35,13 +35,13 @@ class RadminController extends Controller
      */
     public function store(Request $request)
     {
-        $respons=new Admin;
-        $respons->username=$request->username;
-        $respons->password=$request->password;
-        $respons->email=$request->email;
-        $respons->phone_number=$request->phone_number;
-        $respons->unique_code=$request->unique_code;
-        $respons->save();
+        $data=new Admin;
+        $data->username=$request->username;
+        $data->password=$request->password;
+        $data->email=$request->email;
+        $data->phone_number=$request->phone_number;
+        $data->unique_code=$request->unique_code;
+        $data->save();
         return redirect('/login');
     }
 
