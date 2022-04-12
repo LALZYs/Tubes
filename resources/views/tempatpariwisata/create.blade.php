@@ -44,7 +44,7 @@
                             </tr>
                             
                             <tr>
-                                <td colspan="2">
+                                <td colspan="2" class="text-center">
                                     <input type="submit" class="btn btn-primary"/>
                                 </td>
                             </tr>
