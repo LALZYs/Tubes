@@ -7,7 +7,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Tempat Pariwisata
-                    <a href="{{ url('admin/roomtype/create') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
+                    <a href="{{ url('admin/tempatpariwisata/create') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
                 </h6>
             </div>
             <div class="card-body">
@@ -44,13 +44,13 @@
                                         <td>{{ $d->catering }}</td>
                                         <td>{{ $d->tourguide }}</td>
                                         <td>
-                                            <a href="{{ url('admin/roomtype/' . $d->id) }}" class="btn btn-info btn-sm">
+                                            <a href="{{ url('admin/tempatpariwisata/' . $d->id) }}" class="btn btn-info btn-sm">
                                                 <i class="fa fa-eye"></i></a>
-                                            <a href="{{ url('admin/roomtype/' . $d->id) . '/edit' }}"
+                                            <a href="{{ url('admin/tempatpariwisata/' . $d->id) . '/edit' }}"
                                                 class="btn btn-primary btn-sm">
                                                 <i class="fa fa-edit"></i></a>
                                             <a onclick="return confirm('Are you sure to delete this data?')"
-                                                href="{{ url('admin/roomtype/' . $d->id) . '/delete' }}"
+                                                href="{{ url('admin/tempatpariwisata/' . $d->id) . '/delete' }}"
                                                 class="btn btn-danger btn-sm">
                                                 <i class="fa fa-trash"></i></a>
                                         </td>

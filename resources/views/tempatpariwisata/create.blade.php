@@ -7,7 +7,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Tambah Tempat Pariwisata
-                    <a href="{{url('admin/roomtype')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
+                    <a href="{{url('admin/tempatpariwisata')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
                 </h6>
             </div>
             <div class="card-body">
@@ -15,7 +15,7 @@
                 <p class="text-success">{{session('success')}}</p>
                 @endif
                 <div class="table-responsive">
-                    <form method="post", action="{{url('admin/roomtype')}}">
+                    <form method="post", action="{{url('admin/tempatpariwisata')}}">
                         @csrf
                         <table class="table table-bordered">
                             <tr>

@@ -6,7 +6,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a href="{{url('admin/roomtype')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
+                <a href="{{url('admin/tempatpariwisata')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">                    

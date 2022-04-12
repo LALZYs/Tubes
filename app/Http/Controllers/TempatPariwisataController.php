@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\RoomType;
+use App\Models\TempatPariwisata;
 
-class RoomtypeController extends Controller
+class TempatPariwisataController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class RoomtypeController extends Controller
      */
     public function index()
     {
-        $data=RoomType::all();
-        return view('roomtype.index',['data'=>$data]);
+        $data=TempatPariwisata::all();
+        return view('tempatpariwisata.index',['data'=>$data]);
     }
 
     /**
@@ -25,7 +25,7 @@ class RoomtypeController extends Controller
      */
     public function create()
     {
-        return view('roomtype.create');
+        return view('tempatpariwisata.create');
     }
 
     /**
@@ -36,7 +36,7 @@ class RoomtypeController extends Controller
      */
     public function store(Request $request)
     {
-        $data=new RoomType;
+        $data=new TempatPariwisata;
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
@@ -45,7 +45,7 @@ class RoomtypeController extends Controller
         $data->tourguide=$request->tourguide;
         $data->save();
 
-        return redirect('admin/roomtype/create')->with('success', 'Data has been added.');
+        return redirect('admin/tempatpariwisata/create')->with('success', 'Data has been added.');
 
     }
 
@@ -57,8 +57,8 @@ class RoomtypeController extends Controller
      */
     public function show($id)
     {
-        $data=RoomType::find($id);
-        return view('roomtype.show',['data'=>$data]);
+        $data=TempatPariwisata::find($id);
+        return view('tempatpariwisata.show',['data'=>$data]);
     }
 
     /**
@@ -70,8 +70,8 @@ class RoomtypeController extends Controller
     public function edit($id)
     {
 
-        $data=RoomType::find($id);
-        return view('roomtype.edit',['data'=>$data]);
+        $data=TempatPariwisata::find($id);
+        return view('tempatpariwisata.edit',['data'=>$data]);
 
         
     }
@@ -85,7 +85,7 @@ class RoomtypeController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data=RoomType::find($id);
+        $data=TempatPariwisata::find($id);
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
@@ -94,7 +94,7 @@ class RoomtypeController extends Controller
         $data->tourguide=$request->tourguide;
         $data->save();
 
-        return redirect('admin/roomtype/'.$id.'/edit')->with('success', 'Data has been updated.');
+        return redirect('admin/tempatpariwisata/'.$id.'/edit')->with('success', 'Data has been updated.');
     }
 
     /**
@@ -105,8 +105,8 @@ class RoomtypeController extends Controller
      */
     public function destroy($id)
     {
-        RoomType::where('id',$id)->delete();
-        return redirect('admin/roomtype')->with('success', 'Data has been delete.');
+        TempatPariwisata::where('id',$id)->delete();
+        return redirect('admin/tempatpariwisata')->with('success', 'Data has been delete.');
 
     }
 }
