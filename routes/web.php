@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RadminController;
 use App\Http\Controllers\RtourguideController;
+use App\Http\Controllers\RtouristController;
 use App\Http\Controllers\LtourguideController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LadminController;
@@ -42,6 +43,10 @@ Route::get('/radmin', function () {
     return view('register.radmin');
 })->name('radmin');
 
+Route::get('/rtourist', function () {
+    return view('register.rtourist');
+})->name('rtourist');
+
 Route::get('/rtourguide', function () {
     return view('register.rtourguide');
 })->name('rtourguide');
@@ -54,13 +59,22 @@ Route::get('/loggedmin', function () {
     return view('loggedmin.layout');
 })->name('loggedmin');
 
+Route::get('/ltourist', function () {
+    return view('ltourist');
+})->name('ltourist');
+
 Route::get('/loggedtour', function () {
     return view('loggedtour.halamantg');
 })->name('loggedtour');
 
+Route::get('/ltourist', function () {
+    return view('login.ltourist');
+})->name('ltourist');
+
 
 
 Route::post('/radmin',[RadminController::class,'store']);
+Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/rtourguide',[RtourguideController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/loggedtour',[LtourguideController::class,'store']);

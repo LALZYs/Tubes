@@ -20,7 +20,7 @@
       <a href="{{ url('radmin') }}" class="signin-btn">Admin Register</a>
       </div>
       <div class="signin-breeder-wrapper">
-      <a href="" class="signin-btn">Tourist Register</a>
+      <a href="rtourist" class="signin-btn">Tourist Register</a>
        </div> 
       <div class="signin-customer-wrapper">
       <a href="{{ url('rtourguide') }}" class="signin-btn">Tourguide Register</a>
