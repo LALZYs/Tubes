@@ -45,7 +45,7 @@ class TempatPariwisataController extends Controller
         $data->tourguide=$request->tourguide;
         $data->save();
 
-        return redirect('admin/tempatpariwisata/create')->with('success', 'Data has been added.');
+        return redirect('admin/tempatpariwisata/create')->with('success', 'Data berhasil ditambahkan.');
 
     }
 
@@ -94,7 +94,7 @@ class TempatPariwisataController extends Controller
         $data->tourguide=$request->tourguide;
         $data->save();
 
-        return redirect('admin/tempatpariwisata/'.$id.'/edit')->with('success', 'Data has been updated.');
+        return redirect('admin/tempatpariwisata/'.$id.'/edit')->with('success', 'Data berhasil di update.');
     }
 
     /**
@@ -106,7 +106,7 @@ class TempatPariwisataController extends Controller
     public function destroy($id)
     {
         TempatPariwisata::where('id',$id)->delete();
-        return redirect('admin/tempatpariwisata')->with('success', 'Data has been delete.');
+        return redirect('admin/tempatpariwisata')->with('success', 'Data berhasil di hapus.');
 
     }
 }
