@@ -89,6 +89,7 @@ Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::cl
 Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
+Route::resource('tourist/DestinasiPariwisata', DaftarPariwisataController::class);
 
 
 
