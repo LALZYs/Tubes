@@ -47,6 +47,7 @@ class LadminController extends Controller
             
         }
         return redirect('/login');
+
     }
 
     /**
