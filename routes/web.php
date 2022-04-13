@@ -9,6 +9,7 @@ use App\Http\Controllers\LtourguideController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LadminController;
 use App\Http\Controllers\TempatPariwisataController;
+use App\Http\Controllers\DaftarPariwisataController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -68,6 +69,7 @@ Route::get('/loggedtour', function () {
     return view('loggedtour.halamantg');
 })->name('loggedtour');
 
+
 Route::get('/ltourist', function () {
     return view('login.ltourist');
 })->name('ltourist');
@@ -84,7 +86,9 @@ Route::post('/loggedtourist',[LtouristController::class,'store']);
 
 
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
+Route::get('tourguide/DaftarPariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
+Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
 
 
 
