@@ -26,17 +26,44 @@
                             <tr>
                                 <th>Lokasi1</th>
                                 <td>
-                                    <textarea name="lokasi1" class="form-control">{{$data->lokasi1}}</textarea></td>
+                                @if(isset($LokasiWisata))
+                                    <select name="lokasi1" class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        @foreach ($LokasiWisata as $l)
+                                        <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
+                                        @endforeach
+                            
+                                    </select>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <th>Lokasi2</th>
                                 <td>
-                                    <textarea name="lokasi2" class="form-control">{{$data->lokasi2}}</textarea></td>
+                                @if(isset($LokasiWisata))
+                                    <select name="lokasi2" class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        @foreach ($LokasiWisata as $l)
+                                        <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
+                                        @endforeach
+                            
+                                    </select>
+                                    @endif
+                                </td>
                             </tr>
                             <tr>
                                 <th>Lokasi3</th>
                                 <td>
-                                    <textarea name="lokasi3" class="form-control">{{$data->lokasi3}}</textarea></td>
+                                @if(isset($LokasiWisata))
+                                    <select name="lokasi3" class="form-select" aria-label="Default select example">
+                                        <option selected>Open this select menu</option>
+                                        @foreach ($LokasiWisata as $l)
+                                        <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
+                                        @endforeach
+                            
+                                    </select>
+                                    @endif
+                                </td>
                             </tr>
                          
                             <tr>

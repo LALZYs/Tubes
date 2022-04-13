@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\DaftarPariwisata;
+use App\Models\TempatPariwisata;
 
 class DaftarPariwisataController extends Controller
 {
@@ -25,7 +26,8 @@ class DaftarPariwisataController extends Controller
      */
     public function create()
     {
-        return view('DaftarPariwisata.createtg');
+        $LokasiWisata=TempatPariwisata::all();
+        return view('DaftarPariwisata.createtg',['LokasiWisata' =>$LokasiWisata]);
     }
 
     /**
@@ -66,8 +68,9 @@ class DaftarPariwisataController extends Controller
      */
     public function edit($id)
     {
+        $LokasiWisata=TempatPariwisata::all();
         $data=DaftarPariwisata::find($id);
-        return view('DaftarPariwisata.edittg',['data'=>$data]);
+        return view('DaftarPariwisata.edittg',['data'=>$data,'LokasiWisata' =>$LokasiWisata]);
     }
 
     /**
