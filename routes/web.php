@@ -81,9 +81,7 @@ Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/loggedtourist',[LtouristController::class,'store']);
 
-Route::get('admin', function () {
-    return view('dashboard');
-});
+
 
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
