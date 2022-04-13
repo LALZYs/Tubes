@@ -86,7 +86,7 @@ class DaftarPariwisataController extends Controller
         $data->lokasi3=$request->lokasi3;
         $data->save();
 
-        return redirect('tourguide/DaftarPariwisata/'.$id.'/edittg')->with('success', 'Data berhasil di update.');
+        return redirect('tourguide/DaftarPariwisata/')->with('success', 'Data berhasil di update.');
     }
 
     /**

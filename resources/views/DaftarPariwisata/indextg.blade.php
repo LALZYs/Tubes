@@ -16,17 +16,12 @@
                         <thead>
                             <tr>
                                 <th> No </th>
-                                <th>Nama Tempat</th>
-                        
-                                <th>Deskripsi</th>
+                                <th>Daerah</th>
                               
-                                <th>Lokasi</th>
-                               
-                                <th>Tarif</th>
-                               
-                                <th>Catering</th>
-                               
-                                <th>Tourguide</th>
+                                <th>Lokasi1</th>
+                                <th>Lokasi2</th>
+                                <th>Lokasi3</th>
+                    
                                 <th>Action</th>
                             </tr>
                             
@@ -37,7 +32,7 @@
                                 @foreach ($data as $d)
                                     <tr>
                                         <td>{{ $d->id }}</td>
-                                        <td>{{ $d->dearah }}</td>
+                                        <td>{{ $d->daerah }}</td>
                                         <td>{{ $d->lokasi1 }}</td>
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>

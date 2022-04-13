@@ -86,7 +86,7 @@ Route::post('/loggedtourist',[LtouristController::class,'store']);
 
 
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
-Route::get('tourguide/DaftarPariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
+Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
 
