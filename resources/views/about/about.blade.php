@@ -13,7 +13,7 @@
 
         <header class="section-header text-center mb-5 pb-2">
           <h3>About Us</h3>
-          <p>ini nanti di isi keterangan websitenyaapa ya ges</p>
+          <p>Kami adalah perusahan rintisan yang memudahkan tourist mencari tempat pariwisata beserta tourguidenya.</p>
 
           <br>
           <br>
@@ -28,7 +28,7 @@
               </div>
               <h2 class="title">Our Mission</h2>
               <p class="text-center">
-                To utilize the power of technology in setting and reaching goals...
+              
               </p>
             </div>
           </div>
@@ -41,7 +41,7 @@
               </div>
               <h2 class="title">Our Plan</h2>
               <p class="text-center">
-               We Plan to integrate Artificial Intelligence to hitting your set targets.
+              
               </p>
             </div>
           </div>
@@ -55,7 +55,7 @@
               </div>
               <h2 class="title">Our Vision</h2>
               <p class="text-center">
-                To see you achieve more success in reaching more of your goals with Iris Goal Tracker.               
+                         
               </p>
             </div>
           </div>
