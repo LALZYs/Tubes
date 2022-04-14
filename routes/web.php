@@ -80,6 +80,7 @@ Route::post('/radmin',[RadminController::class,'store']);
 Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/rtourguide',[RtourguideController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
+Route::post('/logout',[LadminController::class,'logout']);
 Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/loggedtourist',[LtouristController::class,'store']);
 

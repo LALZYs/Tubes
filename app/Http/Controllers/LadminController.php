@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Auth;
 
 class LadminController extends Controller
 {
@@ -46,7 +47,7 @@ class LadminController extends Controller
             }
             
         }
-        return redirect('/login');
+        return back()->with("gagal","Username,Password, atau Unique Code Salah !");
 
     }
 
@@ -93,5 +94,16 @@ class LadminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+ 
+        request()->session()->invalidate();
+     
+        request()->session()->regenerateToken();
+     
+        return redirect('/');
     }
 }

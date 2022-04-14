@@ -19,7 +19,9 @@
          <!-- login form -->
          <form class="form" action="/loggedmin" method="post">
             @csrf
-           
+           @if(Session::has("gagal"))
+               <strong style="color:red">{{Session::get("gagal")}} </strong>
+           @endif
             <div class="form-group">    
                <label for="text">Username</label>
                <input type="text" class="form-input" name="username" placeholder="Enter your username" id="text">
