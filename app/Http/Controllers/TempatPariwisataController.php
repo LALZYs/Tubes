@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\TempatPariwisata;
+use Session;
 
 class TempatPariwisataController extends Controller
 {
@@ -108,5 +109,12 @@ class TempatPariwisataController extends Controller
         TempatPariwisata::where('id',$id)->delete();
         return redirect('admin/tempatpariwisata')->with('success', 'Data berhasil di hapus.');
 
+    }
+
+    public function __construct(){
+       
+        if(!Session::has('username')){
+           redirect('ladmin')->send();
+        }
     }
 }

@@ -6,10 +6,11 @@ use App\Http\Controllers\RtourguideController;
 use App\Http\Controllers\RtouristController;
 use App\Http\Controllers\LtouristController;
 use App\Http\Controllers\LtourguideController;
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\LogminController;
 use App\Http\Controllers\LadminController;
 use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
+use App\Http\Controllers\DashminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,10 +58,6 @@ Route::get('/about', function () {
     return view('about.about');
 })->name('about');
 
-Route::get('/loggedmin', function () {
-    return view('loggedmin.layout');
-})->name('loggedmin');
-
 Route::get('/loggedtourist', function () {
     return view('loggedtourist.loggedtourist');
 })->name('loggedtourist');
@@ -81,9 +78,9 @@ Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/rtourguide',[RtourguideController::class,'store']);
 Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/logout',[LadminController::class,'logout']);
+Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
 Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/loggedtourist',[LtouristController::class,'store']);
-
 
 
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);

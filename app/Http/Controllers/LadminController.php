@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
+use Session;
 
 class LadminController extends Controller
 {
@@ -15,7 +16,9 @@ class LadminController extends Controller
      */
     public function index()
     {
-        //
+        return view('loggedmin.layout',[
+            'title' => 'Login'
+        ]);
     }
 
     /**
@@ -36,19 +39,19 @@ class LadminController extends Controller
      */
     public function store(Request $req)
     {   
-  
         $data= Admin::where('username','=',$req->username)->first();
         if($data){
-            if($data->username== $req->username && $data->password== $req->password && $data->unique_code== $req->kodeunik)
+            if($data->username== $req->username && $data->password== $req->password && $data->unique_code== $req->unique_code)
             {
-                session(['username' => $data->username,'uniquecode' => $data->unique_code]);
-                
-                return redirect('/loggedmin');
+                Session::put('username' , $data->username);
+                Session::put('uniquecode' ,$data->unique_code);
+                return redirect('/logmin');
             }
             
         }
-        return back()->with("gagal","Username,Password, atau Unique Code Salah !");
-
+        return redirect()->back()->with('gagal',"Login Gagal !");
+            
+    
     }
 
     /**
@@ -99,11 +102,8 @@ class LadminController extends Controller
     public function logout()
     {
         Auth::logout();
- 
-        request()->session()->invalidate();
-     
-        request()->session()->regenerateToken();
-     
+
+        request()->session()->flush();
         return redirect('/');
     }
 }

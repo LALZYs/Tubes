@@ -19,8 +19,9 @@
          <!-- login form -->
          <form class="form" action="/loggedmin" method="post">
             @csrf
-           @if(Session::has("gagal"))
-               <strong style="color:red">{{Session::get("gagal")}} </strong>
+            
+           @if($message = Session::get("gagal"))
+               <strong style="color:red">{{$message}} </strong>
            @endif
             <div class="form-group">    
                <label for="text">Username</label>
@@ -31,8 +32,8 @@
                <input type="password" class="form-input" name="password" placeholder="Enter your password" id="password">
             </div>
             <div class="form-group">
-               <label for="kodeunik">Unique Code</label>
-               <input type="kodeunik" class="form-input" name="kodeunik" placeholder="Enter your unique code" id="kodeunik">
+               <label for="unique_code">Unique Code</label>
+               <input type="unique_code" class="form-input" name="unique_code" placeholder="Enter your unique code" id="unique_code">
             </div>
             <button type="submit" name="submit" class="btn">Log in</button>
          </form>
