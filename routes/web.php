@@ -59,7 +59,7 @@ Route::get('/about', function () {
 })->name('about');
 
 Route::get('/loggedtourist', function () {
-    return view('loggedtourist.loggedtourist');
+    return view('loggedtourist.landingtourist');
 })->name('loggedtourist');
 
 Route::get('/loggedtour', function () {
@@ -80,7 +80,7 @@ Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/logout',[LadminController::class,'logout']);
 Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
 Route::post('/loggedtour',[LtourguideController::class,'store']);
-Route::post('/loggedtourist',[LtouristController::class,'store']);
+Route::post('/landingtourist',[LtouristController::class,'store']);
 
 
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
