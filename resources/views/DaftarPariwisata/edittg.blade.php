@@ -21,20 +21,19 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th>Daerah</th>
-                                <td><input value="{{$data->daerah}}" name="daerah" type="text" class="form-control" /></td>
+                                <td><input value="{{$data->daerah}}" name="daerah" type="text" class="form-control"/></td>
                             </tr>
                             <tr>
                                 <th>Lokasi1</th>
                                 <td>
                                 @if(isset($LokasiWisata))
                                     <select name="lokasi1" class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
+                                        <option selected>{{ $data->lokasi1 }}</option>
                                         @foreach ($LokasiWisata as $l)
                                         <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
                                         @endforeach
-                            
                                     </select>
-                                    @endif
+                                @endif
                                 </td>
                             </tr>
                             <tr>
@@ -42,7 +41,7 @@
                                 <td>
                                 @if(isset($LokasiWisata))
                                     <select name="lokasi2" class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
+                                        <option selected>{{ $data->lokasi2 }}</option>
                                         @foreach ($LokasiWisata as $l)
                                         <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
                                         @endforeach
@@ -56,7 +55,7 @@
                                 <td>
                                 @if(isset($LokasiWisata))
                                     <select name="lokasi3" class="form-select" aria-label="Default select example">
-                                        <option selected>Open this select menu</option>
+                                        <option selected>{{$data->lokasi3}}</option>
                                         @foreach ($LokasiWisata as $l)
                                         <option value="{{ $l->nama_tempat }}">{{ $l->nama_tempat }}</option>
                                         @endforeach

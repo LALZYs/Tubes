@@ -20,7 +20,9 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th>Daerah</th>
-                                <td><input name="daerah" type="text" class="form-control"/></td>
+                                <td>
+                                    <input name="daerah" type="text" class="form-control"/>
+                                </td>
                             </tr>
                             <tr>
                                 <th>Lokasi1</th>
