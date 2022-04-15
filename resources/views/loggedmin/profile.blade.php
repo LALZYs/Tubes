@@ -29,7 +29,7 @@
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    <img src="/img/undraw_profile.svg" alt="Admin" class="rounded-circle" width="150">
                     <div class="mt-3">
                       <h4>{{Session::get('username');}}</h4>
                     </div>
@@ -42,7 +42,7 @@
                 <div class="card-body">
                   <div class="row">
                     <div class="col-sm-3">
-                      <h6 class="mb-0">Nama Lengkap</h6>
+                      <h6 class="mb-0">Username</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
                         {{Session::get('username');}}
@@ -54,7 +54,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{Session::get('email');}}
+                      
                     </div>
                   </div>
                   <hr>
@@ -63,7 +63,7 @@
                       <h6 class="mb-0">Phone Number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                        {{Session::get('phone_number');}}
+                      
                     </div>
                   </div>
                   <hr>

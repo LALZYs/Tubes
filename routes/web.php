@@ -11,6 +11,7 @@ use App\Http\Controllers\LadminController;
 use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
 use App\Http\Controllers\DashminController;
+use App\Http\Controllers\ProminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,10 +38,6 @@ Route::get('/register', function () {
 Route::get('/ladmin', function () {
     return view('login.ladmin');
 })->name('ladmin');
-
-Route::get('/promin', function () {
-    return view('loggedmin.profile');
-})->name('promin');
 
 Route::get('/ltourguide', function () {
     return view('login.ltourguide');
@@ -86,6 +83,7 @@ Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/landingtourist',[LtouristController::class,'store']);
 
 Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
+Route::get('/promin',[ProminController::class,'index'])->name('promin');
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);

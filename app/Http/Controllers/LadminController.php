@@ -16,9 +16,7 @@ class LadminController extends Controller
      */
     public function index()
     {
-        return view('loggedmin.layout',[
-            'title' => 'Login'
-        ]);
+        //
     }
 
     /**
