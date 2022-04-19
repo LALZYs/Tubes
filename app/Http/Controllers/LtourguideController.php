@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tourguide;
+use Session;
+use Illuminate\Support\Facades\Auth;
 
 class LtourguideController extends Controller
 {
@@ -39,9 +41,10 @@ class LtourguideController extends Controller
         if($respons){
             if($respons->username== $req->username && $respons->password== $req->password && $respons->asal_kota== $req->asalkota)
             {
-                session(['username' => $respons->username,'asalkota' => $respons->asal_kota]);
+                Session::put('username' , $respons->username);
+                Session::put('asalkota' ,$respons->asal_kota); 
                 
-                return redirect('/loggedtour');
+                return redirect('/logtg');
             }
             
         }
@@ -91,5 +94,13 @@ class LtourguideController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        request()->session()->flush();
+        return redirect('/');
     }
 }

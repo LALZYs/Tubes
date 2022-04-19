@@ -12,6 +12,7 @@ use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
 use App\Http\Controllers\DashminController;
 use App\Http\Controllers\ProminController;
+use App\Http\Controllers\DashtgController;
 
 /*
 |--------------------------------------------------------------------------
@@ -82,9 +83,11 @@ Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/logout',[LadminController::class,'logout']);
 Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/landingtourist',[LtouristController::class,'store']);
+Route::post('/logout',[LtourguideController::class,'logout']);
 
 Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
 Route::get('/promin',[ProminController::class,'index'])->name('promin');
+Route::get('/logtg',[DashtgController::class,'index'])->name('loggedtour');
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
