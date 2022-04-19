@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\DaftarPariwisata;
 use App\Models\TempatPariwisata;
 use App\Models\Tourguide;
+use Session;
 
 class DaftarPariwisataController extends Controller
 {
@@ -105,5 +106,12 @@ class DaftarPariwisataController extends Controller
     {
         DaftarPariwisata::where('id',$id)->delete();
         return redirect('tourguide/DaftarPariwisata')->with('success', 'Data berhasil di hapus.');
+    }
+
+    public function __construct(){
+       
+        if(!Session::has('username')){
+           redirect('ltourguide')->send();
+        }
     }
 }
