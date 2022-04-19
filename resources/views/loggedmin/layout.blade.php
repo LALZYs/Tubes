@@ -27,13 +27,13 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        
+
         <ul style="background-color: #2c2534;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            
+
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('loggedmin')}}">
-               
+
                 <div class="sidebar-brand-text mx-3">TripKUY</div>
             </a>
 
@@ -61,9 +61,8 @@
                 </div>
             </li>
 
-        
 
-         
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -95,12 +94,12 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -158,7 +157,7 @@
                 <div class="modal-footer">
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button> 
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Logout</button>
                     </form>
                 </div>
