@@ -26,6 +26,7 @@ use App\Http\Controllers\ProtgController;
 |
 */
 
+#LANDING PAGE
 Route::get('/', function () {
     return view('layout.index');
 })->name('index');
@@ -38,63 +39,70 @@ Route::get('/register', function () {
     return view('register.RegisterAS');
 })->name('register');
 
+Route::get('/about', function () {
+    return view('about.about');
+})->name('about');
+
+#ADMIN
 Route::get('/ladmin', function () {
     return view('login.ladmin');
 })->name('ladmin');
-
-Route::get('/ltourguide', function () {
-    return view('login.ltourguide');
-})->name('ltourguide');
 
 Route::get('/radmin', function () {
     return view('register.radmin');
 })->name('radmin');
 
+Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
+Route::get('/promin',[ProminController::class,'index'])->name('promin');
+Route::post('/radmin',[RadminController::class,'store']);
+Route::post('/loggedmin',[LadminController::class,'store']);
+Route::post('/logout',[LadminController::class,'logout']);
+Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
+Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
+
+#TOURIST
+Route::get('/ltourist', function () {
+    return view('login.ltourist');
+})->name('ltourist');
+
 Route::get('/rtourist', function () {
     return view('register.rtourist');
 })->name('rtourist');
 
-Route::get('/rtourguide', function () {
-    return view('register.rtourguide');
-})->name('rtourguide');
-
-Route::get('/about', function () {
-    return view('about.about');
-})->name('about');
-
 Route::get('/loggedtourist', function () {
     return view('loggedtourist.landingtourist');
 })->name('loggedtourist');
+
+Route::post('/rtourist',[RtouristController::class,'store']);
+Route::resource('tourist/DestinasiPariwisata', DaftarPariwisataController::class);
+
+#TOURGUIDE
+Route::get('/ltourguide', function () {
+    return view('login.ltourguide');
+})->name('ltourguide');
+
+Route::get('/rtourguide', function () {
+    return view('register.rtourguide');
+})->name('rtourguide');
 
 Route::get('/loggedtour', function () {
     return view('loggedtour.halamantg');
 })->name('loggedtour');
 
 
-Route::get('/ltourist', function () {
-    return view('login.ltourist');
-})->name('ltourist');
 
-
-
-Route::post('/radmin',[RadminController::class,'store']);
-Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/rtourguide',[RtourguideController::class,'store']);
-Route::post('/loggedmin',[LadminController::class,'store']);
-Route::post('/logout',[LadminController::class,'logout']);
 Route::post('/loggedtour',[LtourguideController::class,'store']);
 Route::post('/landingtourist',[LtouristController::class,'store']);
 Route::post('/logout',[LtourguideController::class,'logout']);
-
-Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
-Route::get('/promin',[ProminController::class,'index'])->name('promin');
 Route::get('/logtg',[DashtgController::class,'index'])->name('loggedtour');
 Route::get('/protg',[ProtgController::class,'index'])->name('protg');
-Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
-Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
-Route::resource('tourist/DestinasiPariwisata', DaftarPariwisataController::class);
+
+
+
+
 
 
 
