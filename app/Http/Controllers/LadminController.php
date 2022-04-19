@@ -36,7 +36,7 @@ class LadminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $req)
-    {   
+    {
         $data= Admin::where('username','=',$req->username)->first();
         if($data){
             if($data->username== $req->username && $data->password== $req->password && $data->unique_code== $req->unique_code)
@@ -45,11 +45,11 @@ class LadminController extends Controller
                 Session::put('uniquecode' ,$data->unique_code);
                 return redirect('/logmin');
             }
-            
+
         }
         return redirect()->back()->with('gagal',"Login Gagal !");
-            
-    
+
+
     }
 
     /**

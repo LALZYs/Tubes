@@ -12,6 +12,7 @@ use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
 use App\Http\Controllers\DashminController;
 use App\Http\Controllers\ProminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -89,6 +90,7 @@ Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
 Route::resource('tourist/DestinasiPariwisata', DaftarPariwisataController::class);
+
 
 
 

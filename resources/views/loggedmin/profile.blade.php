@@ -14,7 +14,7 @@
 <body>
 <div class="container">
     <div class="main-body">
-    
+
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
@@ -23,13 +23,13 @@
             </ol>
           </nav>
           <!-- /Breadcrumb -->
-    
+
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
-                    <img src="/img/undraw_profile.svg" alt="Admin" class="rounded-circle" width="150">
+                    <img src="/img/undraw_profile.svg" alt="Admin" class="rounded-circle" width="110">
                     <div class="mt-3">
                       <h4>{{Session::get('username');}}</h4>
                     </div>
@@ -54,7 +54,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      
+                        {{$data->email}}
                     </div>
                   </div>
                   <hr>
@@ -63,7 +63,7 @@
                       <h6 class="mb-0">Phone Number</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      
+                        {{$data->phone_number}}
                     </div>
                   </div>
                   <hr>
