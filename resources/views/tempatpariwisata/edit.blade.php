@@ -15,10 +15,14 @@
                     <p class="text-success">{{ session('success') }}</p>
                 @endif
                 <div class="table-responsive">
-                    <form method="post" , action="{{ url('admin/tempatpariwisata/'.$data->id) }}">
+                    <form method="post" , action="{{ url('admin/tempatpariwisata/'.$data->id) }}" enctype="multipart/form-data">
                         @csrf
                         @method('put')
                         <table class="table table-bordered">
+                            <tr>
+                                <th>Gambar</th>
+                                <td><input value="{{$data->gambar}}" name="gambar" type="file" class="form-control" /></td>
+                            </tr>
                             <tr>
                                 <th>Nama Tempat</th>
                                 <td><input value="{{$data->nama_tempat}}" name="nama_tempat" type="text" class="form-control" /></td>

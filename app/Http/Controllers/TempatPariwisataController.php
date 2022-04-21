@@ -88,6 +88,7 @@ class TempatPariwisataController extends Controller
     public function update(Request $request, $id)
     {
         $data=TempatPariwisata::find($id);
+        $data->gambar=$request->file('gambar')-> store('gambar_pariwisata');
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
