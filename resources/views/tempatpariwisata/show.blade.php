@@ -13,7 +13,7 @@
                     <table class="table table-bordered">
                         <tr>
                             <th>Gambar</th>
-                            <td>{{$data->gambar}}</td>
+                            <td><img src="{{asset('storage/'.$data->gambar ) }}" alt="Italian Trulli" class="img-thumbnail"></td>
                         </tr>
                         <tr>
                             <th>Nama Tempat</th>
