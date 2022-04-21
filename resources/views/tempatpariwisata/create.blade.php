@@ -23,7 +23,7 @@
                                 <td><input name="gambar" type="file" class="form-control"/></td>
                             </tr>
                             <tr>
-                                <th>Nama Tempat</th>
+                                <th>Nama</th>
                                 <td><textarea name="nama_tempat" class="form-control"></textarea></td>
                             </tr>
                             <tr>

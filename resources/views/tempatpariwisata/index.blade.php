@@ -6,7 +6,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tempat Pariwisata
+                <h6 class="m-0 font-weight-bold text-primary">Daftar Tempat Pariwisata
                     <a href="{{ url('admin/tempatpariwisata/create') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
                 </h6>
             </div>
@@ -19,7 +19,7 @@
 
                                 <th>Gambar</th>
 
-                                <th>Nama Tempat</th>
+                                <th>Nama</th>
 
                                 <th>Deskripsi</th>
 

@@ -18,7 +18,7 @@
                             <td><img src="{{asset('storage/'.$data->gambar ) }}" alt="Italian Trulli" class="img-thumbnail"></td>
                         </tr>
                         <tr>
-                            <th>Nama Tempat</th>
+                            <th>Nama</th>
                             <td>{{$data->nama_tempat}}</td>
                         </tr>
                         <tr>

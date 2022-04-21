@@ -24,7 +24,7 @@
                                 <td><input value="{{$data->gambar}}" name="gambar" type="file" class="form-control" /></td>
                             </tr>
                             <tr>
-                                <th>Nama Tempat</th>
+                                <th>Nama</th>
                                 <td><input value="{{$data->nama_tempat}}" name="nama_tempat" type="text" class="form-control" /></td>
                             </tr>
                             <tr>
