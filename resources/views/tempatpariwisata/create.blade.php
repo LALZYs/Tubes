@@ -15,12 +15,16 @@
                 <p class="text-success">{{session('success')}}</p>
                 @endif
                 <div class="table-responsive">
-                    <form method="post", action="{{url('admin/tempatpariwisata')}}">
+                    <form method="post", action="{{url('admin/tempatpariwisata')}}" enctype="multipart/form-data">
                         @csrf
                         <table class="table table-bordered">
                             <tr>
+                                <th>Gambar</th>
+                                <td><input name="gambar" type="file" class="form-control"/></td>
+                            </tr>
+                            <tr>
                                 <th>Nama Tempat</th>
-                                <td><input name="nama_tempat" type="text" class="form-control"/></td>
+                                <td><textarea name="nama_tempat" class="form-control"></textarea></td>
                             </tr>
                             <tr>
                                 <th>Deskripsi</th>
@@ -42,7 +46,7 @@
                                 <th>Tourguide</th>
                                 <td><textarea name="tourguide" class="form-control"></textarea></td>
                             </tr>
-                            
+
                             <tr>
                                 <td colspan="2" class="text-center">
                                     <input type="submit" class="btn btn-primary"/>
@@ -56,7 +60,7 @@
 
     </div>
     <!-- /.container-fluid -->
-    
+
 @endsection
 
 

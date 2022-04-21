@@ -15,6 +15,7 @@ return new class extends Migration
     {
         Schema::create('tempat_pariwisatas', function (Blueprint $table) {
             $table->id();
+            $table->string('gambar');
             $table->string('nama_tempat');
             $table->string('deskripsi');
             $table->string('lokasi');

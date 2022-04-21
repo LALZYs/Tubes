@@ -9,8 +9,12 @@
                 <a href="{{url('admin/tempatpariwisata')}}" class="float-right btn btn-success btn-sm">Tampilkan Semua</a>
             </div>
             <div class="card-body">
-                <div class="table-responsive">                    
+                <div class="table-responsive">
                     <table class="table table-bordered">
+                        <tr>
+                            <th>Gambar</th>
+                            <td>{{$data->gambar}}</td>
+                        </tr>
                         <tr>
                             <th>Nama Tempat</th>
                             <td>{{$data->nama_tempat}}</td>

@@ -16,27 +16,32 @@
                         <thead>
                             <tr>
                                 <th> No </th>
+
+                                <th>Gambar</th>
+
                                 <th>Nama Tempat</th>
-                        
+
                                 <th>Deskripsi</th>
-                              
+
                                 <th>Lokasi</th>
-                               
+
                                 <th>Tarif</th>
-                               
+
                                 <th>Catering</th>
-                               
+
                                 <th>Tourguide</th>
+
                                 <th>Action</th>
                             </tr>
-                            
-                            
+
+
                         </tfoot>
                         <tbody>
                             @if ($data)
                                 @foreach ($data as $d)
                                     <tr>
                                         <td>{{ $d->id }}</td>
+                                        <td> <img src="{{asset('storage/'.$d->gambar ) }}" alt="Italian Trulli" class="img-thumbnail"></td>
                                         <td>{{ $d->nama_tempat }}</td>
                                         <td>{{ $d->deskripsi }}</td>
                                         <td>{{ $d->lokasi }}</td>

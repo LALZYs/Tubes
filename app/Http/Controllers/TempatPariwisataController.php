@@ -38,6 +38,7 @@ class TempatPariwisataController extends Controller
     public function store(Request $request)
     {
         $data=new TempatPariwisata;
+        $data->gambar=$request->file('gambar')-> store('gambar_pariwisata');
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
@@ -74,7 +75,7 @@ class TempatPariwisataController extends Controller
         $data=TempatPariwisata::find($id);
         return view('tempatpariwisata.edit',['data'=>$data]);
 
-        
+
     }
 
     /**
@@ -112,7 +113,7 @@ class TempatPariwisataController extends Controller
     }
 
     public function __construct(){
-       
+
         if(!Session::has('username')){
            redirect('ladmin')->send();
         }

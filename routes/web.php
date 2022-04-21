@@ -59,6 +59,7 @@ Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/logout',[LadminController::class,'logout']);
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
+Route::post('/admin/tempatpariwisata',[TempatPariwisataController::class,'store']);
 
 #TOURIST
 Route::get('/ltourist', function () {
@@ -99,6 +100,7 @@ Route::get('/logtg',[DashtgController::class,'index'])->name('loggedtour');
 Route::get('/protg',[ProtgController::class,'index'])->name('protg');
 Route::get('tourguide/DaftarPariwisata/{id}/delete', [DaftarPariwisataController::class, 'destroy']);
 Route::resource('tourguide/DaftarPariwisata', DaftarPariwisataController::class);
+
 
 
 
