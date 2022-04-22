@@ -5,6 +5,7 @@ namespace App\Http\Controllers\API;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use Illuminate\Support\Facades\Validator;
 
 class ApiAdminController extends Controller
 {
@@ -41,21 +42,22 @@ class ApiAdminController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-            'username' => 'required|unique:admins|max:255',
+        $validated = Validator::make($request->all(),[
+            'username' => 'required|unique:admins|max:255|min:6',
             'password' => 'required',
             'email' => 'required',
             'phone_number' => 'required',
             'unique_code' => 'required'
         ]);
 
-        $data= Admin::create([
-            'username'=>$validated['username'],
-            'password'=>$validated['password'],
-            'email'=>$validated['email'],
-            'phone_number'=>$validated['phone_number'],
-            'unique_code'=>$validated['unique_code']
-        ]);
+        if($validated -> fails()){
+            return response([
+                'message'=> $validated->errors(),
+            ],401);
+        };
+
+
+        $data= Admin::create($request->all());
         return response([
             'message'=> 'success post admin',
             'admin'=> $data
@@ -70,7 +72,11 @@ class ApiAdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $data= Admin::find($id);
+        return response([
+            'message'=> 'success',
+            'admin'=> $data
+        ],201);
     }
 
     /**
@@ -93,7 +99,20 @@ class ApiAdminController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data= Admin::find($id);
+        $validated = $request->validate([
+            'username' => 'required|unique:admins|max:255',
+            'password' => 'required',
+            'email' => 'required',
+            'phone_number' => 'required',
+            'unique_code' => 'required'
+        ]);
+
+        $data->update($request->all());
+        return response([
+            'message'=> 'success update admin',
+            'admin'=> $data
+        ],201);
     }
 
     /**
@@ -104,6 +123,11 @@ class ApiAdminController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data= Admin::find($id);
+        $data->delete();
+        return response([
+            'message'=> 'success delete data',
+            'admin'=> $data
+        ],201);
     }
 }
