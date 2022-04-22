@@ -14,6 +14,7 @@ use App\Http\Controllers\DashminController;
 use App\Http\Controllers\ProminController;
 use App\Http\Controllers\DashtgController;
 use App\Http\Controllers\ProtgController;
+use App\Http\Controllers\DataTourguideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,6 +61,7 @@ Route::post('/logout',[LadminController::class,'logout']);
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);
 Route::resource('admin/tempatpariwisata', TempatPariwisataController::class);
 Route::post('/admin/tempatpariwisata',[TempatPariwisataController::class,'store']);
+Route::get('/daftartourguide',[DataTourguideController::class,'index']);
 
 #TOURIST
 Route::get('/ltourist', function () {
