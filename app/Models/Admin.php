@@ -10,6 +10,14 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class Admin extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        'username',
+        'password',
+        'email',
+        'phone_number',
+        'unique_code'
+    ];
+
     protected $table =  'admins';
 }
 
