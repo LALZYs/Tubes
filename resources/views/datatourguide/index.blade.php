@@ -34,8 +34,8 @@
                                     <tr>
                                         <td>{{ $d->id }}</td>
                                         <td>{{ $d->username }}</td>
-                                        <td>{{ $d->email }}</td>
                                         <td>{{ $d->phone_number }}</td>
+                                        <td>{{ $d->email }}</td>
                                         <td>{{ $d->asal_kota }}</td>
                                     </tr>
                                 @endforeach
