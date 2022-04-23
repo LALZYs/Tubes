@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
 
     <title>TripKUY</title>
@@ -9,6 +9,7 @@
     <link rel="script" href="{{asset('js\style.js')}}">
     <link rel="stylesheet" href="css\loggedtourist.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         <div class="header-wrapper">
             <div class="main-logo">TripKUY</div>
             <nav class="navbar navbar-expand  topbar mb-4">
-                
+
                 <ul class="main-menu">
                     <li><a href="{{route('about')}}">About Us</a></li>
                     <li><a href="{{route('register')}}">Register</a></li>
@@ -25,18 +26,18 @@
                     <li><a href="#"><span class="fa fa-search"></span></a></li>
                 </ul>
 
-                
+
             <!-- Sidebar Toggle (Topbar) -->
             <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                 <i class="fa fa-bars"></i>
             </button>
 
-           
+
 
             <!-- Topbar Navbar -->
             <ul class="navbar-nav ml-auto">
 
-                
+
                 <!-- Nav Item - User Information -->
                 <li class="nav-item dropdown no-arrow">
                     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
@@ -61,11 +62,12 @@
 
             </ul>
 
-               
+
             </nav>
+
         </div>
     </header>
-
+    @yield('content')
     <section id="section-1">
         <div class="content-slider">
             <input type="radio" id="banner1" class="sec-1-input" name="banner" checked>
