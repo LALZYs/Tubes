@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tourguide;
+use Session;
 
 class DataTourguideController extends Controller
 {
@@ -82,5 +83,12 @@ class DataTourguideController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function __construct(){
+
+        if(!Session::has('username')){
+           redirect('ladmin')->send();
+        }
     }
 }
