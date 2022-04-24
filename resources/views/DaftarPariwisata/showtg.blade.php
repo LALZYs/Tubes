@@ -28,6 +28,7 @@
                             <th>Lokasi3</th>
                             <td>{{$data->lokasi3}}</td>
                         </tr>
+                        
             
                     </table>
                     @endif

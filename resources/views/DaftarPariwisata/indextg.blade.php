@@ -21,6 +21,7 @@
                                 <th>Lokasi1</th>
                                 <th>Lokasi2</th>
                                 <th>Lokasi3</th>
+                        
                     
                                 <th>Action</th>
                             </tr>
@@ -36,6 +37,7 @@
                                         <td>{{ $d->lokasi1 }}</td>
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>
+                                        
                                     
                                         <td>
                                             <a href="{{ url('tourguide/DaftarPariwisata' . $d->id) }}" class="btn btn-info btn-sm">

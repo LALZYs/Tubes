@@ -66,7 +66,6 @@
                                     @endif
                                 </td>
                             </tr>
-                           
                             
                             <tr>
                                 <td colspan="2" class="text-center">

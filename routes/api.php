@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\API\ApiAdminController;
+use App\Http\Controllers\API\ApitourguideController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,3 +22,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::resource('admins', ApiAdminController::class);
+Route::get('/rtourguide/{id}', [ApitourguideController::class,'show']);
+Route::post('/rtourguide/delete/{id}', [ApitourguideController::class,'destroy']);
+Route::post('/rtourguide/update/{id}', [ApitourguideController::class,'update']);
+Route::post('/rtourguide',[ApitourguideController::class,'store']);
