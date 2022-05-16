@@ -20,49 +20,11 @@
 
         <div class="row about-cols">
 
-          <div class="col-md-4 wow fadeInUp">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-mission.webp" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
-              </div>
-              <h2 class="title">Our Mission</h2>
-              <p class="text-center">
-              
-              </p>
-            </div>
-          </div>
 
-          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-plan.webp" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-list-outline"></i></div>
-              </div>
-              <h2 class="title">Our Plan</h2>
-              <p class="text-center">
-              
-              </p>
-            </div>
-          </div>
-          
-          
- <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="about-col">
-              <div class="img">
-                <img src="img/about-vision.webp" alt="" class="img-fluid">
-                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
-              </div>
-              <h2 class="title">Our Vision</h2>
-              <p class="text-center">
-                         
-              </p>
-            </div>
-          </div>
 
-        </div>
 
-      </div>
+
+
     </section><!-- #about -->
 
     <!--==========================
@@ -70,9 +32,9 @@
     ============================-->
     <section id="call-to-action" class="wow fadeIn">
       <div class="container text-center">
-        <h3>Having Problems keeping track on your goals?</h3>
+        <h3>Belum memiliki destinasi tempat pariwisata ? </h3>
         <p class="text-center">
-         With Iris Goal Tracker you can set and track your goals, track time, manage task, and lots more.      </p>
+        Bersama TripKUY anda akan mendapatkan berbagai informasi destinasi tempat pariwisata beserta tourguidenya.   </p>
         <a class="cta-btn" href="/">Get Started</a>
       </div>
     </section><!-- #call-to-action -->
