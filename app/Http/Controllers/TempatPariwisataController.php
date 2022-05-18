@@ -37,7 +37,9 @@ class TempatPariwisataController extends Controller
      */
     public function store(Request $request)
     {
+        // membuat model tempat pariwisata
         $data=new TempatPariwisata;
+        // menerima data yang dibutuhkan sesuai yang admin inputkan
         $data->gambar=$request->file('gambar')-> store('gambar_pariwisata');
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
@@ -46,7 +48,7 @@ class TempatPariwisataController extends Controller
         $data->catering=$request->catering;
         $data->tourguide=$request->tourguide;
         $data->save();
-
+        // mengembalikan pesan bahwa tempat pariwisata berhasil ditambahkan
         return redirect('admin/tempatpariwisata/create')->with('success', 'Data berhasil ditambahkan.');
 
     }
