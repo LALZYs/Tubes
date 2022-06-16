@@ -44,7 +44,6 @@ class TempatPariwisataController extends Controller
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
-        $data->tarif=$request->tarif;
         $data->catering=$request->catering;
         $data->save();
         // mengembalikan pesan bahwa tempat pariwisata berhasil ditambahkan
@@ -93,7 +92,6 @@ class TempatPariwisataController extends Controller
         $data->nama_tempat=$request->nama_tempat;
         $data->deskripsi=$request->deskripsi;
         $data->lokasi=$request->lokasi;
-        $data->tarif=$request->tarif;
         $data->catering=$request->catering;
         $data->save();
 

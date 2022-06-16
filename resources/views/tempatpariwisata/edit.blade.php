@@ -38,19 +38,9 @@
                                     <textarea name="lokasi" class="form-control">{{$data->lokasi}}</textarea></td>
                             </tr>
                             <tr>
-                                <th>Tarif</th>
-                                <td>
-                                    <textarea name="tarif" class="form-control">{{$data->tarif}}</textarea></td>
-                            </tr>
-                            <tr>
                                 <th>Catering</th>
                                 <td>
                                     <textarea name="catering" class="form-control">{{$data->catering}}</textarea></td>
-                            </tr>
-                            <tr>
-                                <th>Tourguide</th>
-                                <td>
-                                    <textarea name="tourguide" class="form-control">{{$data->tourguide}}</textarea></td>
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">

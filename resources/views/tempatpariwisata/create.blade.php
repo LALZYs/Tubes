@@ -35,10 +35,6 @@
                                 <td><textarea name="lokasi" class="form-control"></textarea></td>
                             </tr>
                             <tr>
-                                <th>Tarif</th>
-                                <td><textarea name="tarif" class="form-control"></textarea></td>
-                            </tr>
-                            <tr>
                                 <th>Catering</th>
                                 <td><textarea name="catering" class="form-control"></textarea></td>
                             </tr>

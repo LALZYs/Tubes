@@ -30,10 +30,6 @@
                             <td>{{$data->lokasi}}</td>
                         </tr>
                         <tr>
-                            <th>Tarif</th>
-                            <td>{{$data->tarif}}</td>
-                        </tr>
-                        <tr>
                             <th>Catering</th>
                             <td>{{$data->catering}}</td>
                         </tr>
