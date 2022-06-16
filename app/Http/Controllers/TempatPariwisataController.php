@@ -46,7 +46,6 @@ class TempatPariwisataController extends Controller
         $data->lokasi=$request->lokasi;
         $data->tarif=$request->tarif;
         $data->catering=$request->catering;
-        $data->tourguide=$request->tourguide;
         $data->save();
         // mengembalikan pesan bahwa tempat pariwisata berhasil ditambahkan
         return redirect('admin/tempatpariwisata/create')->with('success', 'Data berhasil ditambahkan.');
@@ -96,7 +95,6 @@ class TempatPariwisataController extends Controller
         $data->lokasi=$request->lokasi;
         $data->tarif=$request->tarif;
         $data->catering=$request->catering;
-        $data->tourguide=$request->tourguide;
         $data->save();
 
         return redirect('admin/tempatpariwisata/'.$id.'/edit')->with('success', 'Data berhasil di update.');

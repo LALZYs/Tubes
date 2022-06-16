@@ -42,10 +42,6 @@
                                 <th>Catering</th>
                                 <td><textarea name="catering" class="form-control"></textarea></td>
                             </tr>
-                            <tr>
-                                <th>Tourguide</th>
-                                <td><textarea name="tourguide" class="form-control"></textarea></td>
-                            </tr>
 
                             <tr>
                                 <td colspan="2" class="text-center">

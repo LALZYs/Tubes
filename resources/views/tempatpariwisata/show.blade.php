@@ -37,10 +37,6 @@
                             <th>Catering</th>
                             <td>{{$data->catering}}</td>
                         </tr>
-                        <tr>
-                            <th>Tourguide</th>
-                            <td>{{$data->tourguide}}</td>
-                        </tr>
                     </table>
                 </div>
             </div>

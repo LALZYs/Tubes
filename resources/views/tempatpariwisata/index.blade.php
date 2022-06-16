@@ -29,8 +29,6 @@
 
                                 <th>Catering</th>
 
-                                <th>Tourguide</th>
-
                                 <th>Action</th>
                             </tr>
 
@@ -47,7 +45,6 @@
                                         <td>{{ $d->lokasi }}</td>
                                         <td>{{ $d->tarif }}</td>
                                         <td>{{ $d->catering }}</td>
-                                        <td>{{ $d->tourguide }}</td>
                                         <td>
                                             <a href="{{ url('admin/tempatpariwisata/' . $d->id) }}" class="btn btn-info btn-sm">
                                                 <i class="fa fa-eye"></i></a>
