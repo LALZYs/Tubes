@@ -21,6 +21,7 @@
                                 <th>Lokasi1</th>
                                 <th>Lokasi2</th>
                                 <th>Lokasi3</th>
+                                <th>Tarif</th>
                         
                     
                                 <th>Action</th>
@@ -37,6 +38,7 @@
                                         <td>{{ $d->lokasi1 }}</td>
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>
+                                        <td>{{ $d->tarif }}</td>
                                         
                                     
                                         <td>

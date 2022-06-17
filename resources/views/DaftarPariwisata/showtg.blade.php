@@ -28,6 +28,10 @@
                             <th>Lokasi3</th>
                             <td>{{$data->lokasi3}}</td>
                         </tr>
+                        <tr>
+                            <th>Tarif</th>
+                            <td>{{$data->tarif}}</td>
+                        </tr>
                         
             
                     </table>

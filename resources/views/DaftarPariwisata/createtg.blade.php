@@ -66,7 +66,12 @@
                                     @endif
                                 </td>
                             </tr>
-                            
+                            <tr>
+                                <th>Tarif</th>
+                                <td>
+                                    <input name="tarif" type="text" class="form-control"/>
+                                </td>
+                            </tr>
                             <tr>
                                 <td colspan="2" class="text-center">
                                     <input type="submit" class="btn btn-primary"/>

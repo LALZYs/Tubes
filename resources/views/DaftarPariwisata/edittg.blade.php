@@ -64,6 +64,10 @@
                                     @endif
                                 </td>
                             </tr>
+                            <tr>
+                                <th>Tarif</th>
+                                <td><input value="{{$data->tarif}}" name="tarif" type="text" class="form-control"/></td>
+                            </tr>
                          
                             <tr>
                                 <td colspan="2" class="text-center">

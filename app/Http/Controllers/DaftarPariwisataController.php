@@ -41,13 +41,16 @@ class DaftarPariwisataController extends Controller
      */
     public function store(Request $request)
     {
+        // Membuat model daftar pariwisata
         $data=new DaftarPariwisata;
+        // Menerima data yang dibutuhkan sesuai yang tourguide inputkan
         $data->daerah=$request->daerah;
         $data->lokasi1=$request->lokasi1;
         $data->lokasi2=$request->lokasi2;
         $data->lokasi3=$request->lokasi3;
+        $data->tarif=$request->tarif;
         $data->save();
-
+        // Mengembalikan pesan bahwa daftar pariwisata berhasil ditambahkan
         return redirect('tourguide/DaftarPariwisata/createtg')->with('success', 'Data berhasil ditambahkan.');
     }
 
@@ -91,6 +94,7 @@ class DaftarPariwisataController extends Controller
         $data->lokasi1=$request->lokasi1;
         $data->lokasi2=$request->lokasi2;
         $data->lokasi3=$request->lokasi3;
+        $data->tarif=$request->tarif;
         $data->save();
 
         return redirect('tourguide/DaftarPariwisata/')->with('success', 'Data berhasil di update.');
