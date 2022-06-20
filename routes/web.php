@@ -10,6 +10,7 @@ use App\Http\Controllers\LogminController;
 use App\Http\Controllers\LadminController;
 use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
+use App\Http\Controllers\DestinasiPariwisataController;
 use App\Http\Controllers\DashminController;
 use App\Http\Controllers\ProminController;
 use App\Http\Controllers\DashtgController;
@@ -77,7 +78,8 @@ Route::get('/loggedtourist', function () {
 })->name('loggedtourist');
 
 Route::post('/rtourist',[RtouristController::class,'store']);
-Route::resource('tourist/DestinasiPariwisata', DaftarPariwisataController::class);
+
+Route::resource('tourist/DestinasiPariwisata', DestinasiPariwisataController::class);
 
 #TOURGUIDE
 Route::get('/ltourguide', function () {

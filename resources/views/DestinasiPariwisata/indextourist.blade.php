@@ -1,13 +1,11 @@
-@extends('loggedtourist.loggedtourist')
+@extends('loggedtourist.landingTourist')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                
-            </div>
+           
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -19,8 +17,9 @@
                                 <th>Lokasi1</th>
                                 <th>Lokasi2</th>
                                 <th>Lokasi3</th>
-                    
-                                <th>Action</th>
+                                <th>Tarif</th>
+                                <th>Pesan</th>
+
                             </tr>
                             
                             
@@ -34,11 +33,9 @@
                                         <td>{{ $d->lokasi1 }}</td>
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>
+                                        <td>{{ $d->tarif }}</td>
+                                        
                                     
-                                        <td>
-                                            
-                                            
-                                        </td>
                                     </tr>
                                 @endforeach
                             @endif

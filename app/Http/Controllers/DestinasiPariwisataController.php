@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TempatPariwisata;
 use App\Models\DestinasiPariwisata;
+use App\Models\DaftarPariwisata;
+use App\Models\Tourist;
+use Session;
 
 class DestinasiPariwisataController extends Controller
 {
@@ -15,7 +18,7 @@ class DestinasiPariwisataController extends Controller
      */
     public function index()
     {
-        $data=DestinasiPariwisata::all();
+        $data=DaftarPariwisata::all();
         return view('DestinasiPariwisata.indextourist',['data'=>$data]);
 
     }
@@ -25,10 +28,7 @@ class DestinasiPariwisataController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        //
-    }
+  
 
     /**
      * Store a newly created resource in storage.
@@ -36,10 +36,7 @@ class DestinasiPariwisataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
-    }
+
 
     /**
      * Display the specified resource.
@@ -60,10 +57,7 @@ class DestinasiPariwisataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    {
-        //
-    }
+ 
 
     /**
      * Update the specified resource in storage.
@@ -72,10 +66,7 @@ class DestinasiPariwisataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.
@@ -83,8 +74,12 @@ class DestinasiPariwisataController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        //
+
+
+    public function __construct(){
+       
+        if(!Session::has('username')){
+           redirect('ltourist')->send();
+        }
     }
 }

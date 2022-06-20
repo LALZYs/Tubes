@@ -1,4 +1,4 @@
-@extends('loggedtourist.loggedtourist')
+@extends('loggedtourist.landingTourist')
 @section('content')
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -28,6 +28,11 @@
                             <th>Lokasi3</th>
                             <td>{{$data->lokasi3}}</td>
                         </tr>
+                        <tr>
+                            <th>Tarif</th>
+                            <td>{{$data->tarif}}</td>
+                        </tr>
+                        
             
                     </table>
                     @endif
