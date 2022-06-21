@@ -78,6 +78,7 @@ Route::get('/loggedtourist', function () {
 })->name('loggedtourist');
 
 Route::post('/rtourist',[RtouristController::class,'store']);
+Route::post('/logout',[LtouristController::class,'logout']);
 
 Route::resource('tourist/DestinasiPariwisata', DestinasiPariwisataController::class);
 

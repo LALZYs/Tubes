@@ -42,14 +42,15 @@ class LtourguideController extends Controller
             if($respons->username== $req->username && $respons->password== $req->password && $respons->asal_kota== $req->asalkota)
             {
                 Session::put('username' , $respons->username);
-                Session::put('asalkota' ,$respons->asal_kota); 
-                
+                Session::put('asalkota' ,$respons->asal_kota);
+
                 return redirect('/logtg');
             }
-            
+
         }
-        return redirect('/login');
+        return redirect()->back()->with('gagal',"Login Gagal !");
     }
+
 
     /**
      * Display the specified resource.

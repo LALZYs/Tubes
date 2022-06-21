@@ -19,11 +19,11 @@
          <!-- login form -->
          <form class="form" action="/loggedmin" method="post">
             @csrf
-            
+
            @if($message = Session::get("gagal"))
                <strong style="color:red">{{$message}} </strong>
            @endif
-            <div class="form-group">    
+            <div class="form-group">
                <label for="text">Username</label>
                <input type="text" class="form-input" name="username" placeholder="Enter your username" id="text">
             </div>

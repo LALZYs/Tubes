@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Tourist;
+use Session;
+use Illuminate\Support\Facades\Auth;
 
 class LtouristController extends Controller
 {
@@ -40,12 +42,13 @@ class LtouristController extends Controller
             if($data->username== $req->username && $data->password== $req->password)
             {
                 session(['username' => $data->username,'password' => $data->password]);
-                
+
                 return redirect('/loggedtourist');
             }
-            
+
         }
-        return redirect('/login');
+        return redirect()->back()->with('gagal',"Login Gagal !");
+
     }
 
     /**
@@ -92,4 +95,14 @@ class LtouristController extends Controller
     {
         //
     }
+
+    public function logout()
+    {
+        Auth::logout();
+
+        request()->session()->flush();
+        return redirect('/');
+    }
+
+
 }

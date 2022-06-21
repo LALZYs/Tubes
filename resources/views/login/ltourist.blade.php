@@ -13,14 +13,17 @@
 </head>
 
 <body>
-    
+
    <section class="login-section">
       <div class="card-login">
         <h3>TripKUY</h3>
          <!-- login form -->
          <form class="form" action="/landingtourist" method="post">
             @csrf
-            <div class="form-group">   
+            @if($message = Session::get("gagal"))
+               <strong style="color:red">{{$message}} </strong>
+           @endif
+            <div class="form-group">
                <label for="text">Username</label>
                <input type="text" class="form-input" name="username" placeholder="Enter your username" id="username">
             </div>
@@ -31,7 +34,7 @@
             <a href="loggedtourist">
                <button type="submit" name="submit" class="btn">Log in</button>
             </a>
-            
+
          </form>
       </div>
       <!-- Text create account -->
