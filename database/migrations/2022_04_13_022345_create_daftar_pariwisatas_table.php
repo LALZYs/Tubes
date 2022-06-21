@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('lokasi1');
             $table->string('lokasi2');
             $table->string('lokasi3');
+            $table->string('tarif');
             $table->timestamps();
         });
     }

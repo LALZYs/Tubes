@@ -19,9 +19,7 @@ return new class extends Migration
             $table->string('nama_tempat');
             $table->string('deskripsi');
             $table->string('lokasi');
-            $table->string('tarif');
             $table->string('catering');
-            $table->string('tourguide');
             $table->timestamps();
         });
     }
