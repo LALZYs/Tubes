@@ -11,6 +11,7 @@ use App\Http\Controllers\LadminController;
 use App\Http\Controllers\TempatPariwisataController;
 use App\Http\Controllers\DaftarPariwisataController;
 use App\Http\Controllers\DestinasiPariwisataController;
+use App\Http\Controllers\DashtouristController;
 use App\Http\Controllers\DashminController;
 use App\Http\Controllers\ProminController;
 use App\Http\Controllers\DashtgController;
@@ -78,6 +79,7 @@ Route::get('/loggedtourist', function () {
     return view('loggedtourist.landingtourist');
 })->name('loggedtourist');
 
+Route::get('/logrist',[DashtouristController::class,'index'])->name('loggedrist');
 Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/logout',[LtouristController::class,'logout']);
 

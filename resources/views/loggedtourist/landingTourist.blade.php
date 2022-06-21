@@ -29,10 +29,10 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-        
+
         <ul style="background-color: #2c2534;" class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar">
 
-            
+
             <!-- Sidebar - Brand -->
             <div class="sidebar-header d-flex justify-content-left align-items-center px-3 py-4">
                 <img
@@ -42,7 +42,7 @@
                     alt="">
                 <div class="ms-2">
                 <h5 class="fs-6 mb-0">
-                    <a class="text-decoration-none" href="#">{{Session::get('username');}}</a>
+                    <a class="text-decoration-none" href="{{route('loggedrist')}}">{{Session::get('username');}}</a>
                 </h5>
                 </div>
             </div>
@@ -70,9 +70,9 @@
                 </div>
             </li>
 
-        
 
-         
+
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -99,15 +99,15 @@
                         <i class="fa fa-bars"></i>
                     </button>
 
-                   
+
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
-                        
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            <a class="nav-link dropdown-toggle" href="{{route('loggedrist')}}" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{Session::get('username');}}</span>
                                 <img class="img-profile rounded-circle" src="/img/undraw_profile.svg">
@@ -162,7 +162,7 @@
                 <div class="modal-footer">
                     <form action="/logout" method="post">
                         @csrf
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button> 
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
                         <button type="submit" class="btn btn-primary">Logout</button>
                     </form>
                 </div>

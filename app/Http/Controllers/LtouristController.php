@@ -41,9 +41,10 @@ class LtouristController extends Controller
         if($data){
             if($data->username== $req->username && $data->password== $req->password)
             {
-                session(['username' => $data->username,'password' => $data->password]);
+                Session::put('username' , $data->username);
+                Session::put('password' ,$data->password);
 
-                return redirect('/loggedtourist');
+                return redirect('/logrist');
             }
 
         }
