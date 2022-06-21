@@ -34,6 +34,11 @@
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>
                                         <td>{{ $d->tarif }}</td>
+                                        <td>   
+                                            <a href="{{ url('tourguide/DaftarPariwisata/' . $d->id) . '/order' }}"
+                                                class="btn btn-primary btn-sm">
+                                                <i class="fa fa-edit"></i></a>
+                                        </td>
                                         
                                     
                                     </tr>

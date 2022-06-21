@@ -16,6 +16,7 @@ use App\Http\Controllers\ProminController;
 use App\Http\Controllers\DashtgController;
 use App\Http\Controllers\ProtgController;
 use App\Http\Controllers\DataTourguideController;
+use App\Http\Controllers\ProtouristController;
 
 /*
 |--------------------------------------------------------------------------
@@ -81,6 +82,8 @@ Route::post('/rtourist',[RtouristController::class,'store']);
 Route::post('/logout',[LtouristController::class,'logout']);
 
 Route::resource('tourist/DestinasiPariwisata', DestinasiPariwisataController::class);
+
+Route::get('/profiletourist',[ProtouristController::class,'index'])->name('profiletourist');
 
 #TOURGUIDE
 Route::get('/ltourguide', function () {

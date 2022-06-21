@@ -7,7 +7,7 @@
         <div class="card shadow mb-4">
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Tempat Pariwisata
-                    <a href="{{ url('tourguide/DaftarPariwisata/createtg') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
+                    <a href="{{ url('tourguide/DaftarPariwisata/create') }}" class="float-right btn btn-success btn-sm">Tambah Tempat Pariwisata</a>
                 </h6>
             </div>
             <div class="card-body">
