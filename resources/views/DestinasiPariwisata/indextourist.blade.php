@@ -35,9 +35,8 @@
                                         <td>{{ $d->lokasi3 }}</td>
                                         <td>{{ $d->tarif }}</td>
                                         <td>   
-                                            <a href="{{ url('tourguide/DaftarPariwisata/' . $d->id) . '/order' }}"
-                                                class="btn btn-primary btn-sm">
-                                                <i class="fa fa-edit"></i></a>
+                                        <a href="{{ url('tourist/DestinasiPariwisata/' . $d->id) }}" class="btn btn-info btn-sm">
+                                                <i class="fa fa-eye"></i></a>
                                         </td>
                                         
                                     

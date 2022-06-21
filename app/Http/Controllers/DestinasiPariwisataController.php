@@ -46,7 +46,7 @@ class DestinasiPariwisataController extends Controller
      */
     public function show($id)
     {
-        $data=DestinasiPariwisata::find($id);
+        $data=DaftarPariwisata::find($id);
         return view('DestinasiPariwisata.showtourist',['data'=>$data]);
 
     }
