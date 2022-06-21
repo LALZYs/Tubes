@@ -13,6 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
+        Schema::create('ordersystem', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama');
+            $table->string('tanggal pembelian');
+            $table->string('email');
+            $table->string('phone_number');
+            $table->string('harga');
+            $table->timestamps();
+        });
+    }
         //
     }
 

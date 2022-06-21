@@ -33,10 +33,15 @@
                     <th>Lokasi3</th>
                     <td>{{$data->lokasi3}}</td>
                 </tr>
+                <tr>
+                    <td colspan="2" class="text-center">
+                     <input type="submit" class="btn btn-success btn-sm"/>
+                     </td>
+                </tr>
             </table>
         </div>
     </div>
-    
+
 </div>
 
 </div>
