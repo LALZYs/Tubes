@@ -17,17 +17,17 @@
                             <tr>
                                 <th> No </th>
                                 <th>Daerah</th>
-                              
+
                                 <th>Lokasi1</th>
                                 <th>Lokasi2</th>
                                 <th>Lokasi3</th>
                                 <th>Tarif</th>
-                        
-                    
+
+
                                 <th>Action</th>
                             </tr>
-                            
-                            
+
+
                         </tfoot>
                         <tbody>
                             @if ($data)
@@ -39,10 +39,10 @@
                                         <td>{{ $d->lokasi2 }}</td>
                                         <td>{{ $d->lokasi3 }}</td>
                                         <td>{{ $d->tarif }}</td>
-                                        
-                                    
+
+
                                         <td>
-                                            <a href="{{ url('tourguide/DaftarPariwisata' . $d->id) }}" class="btn btn-info btn-sm">
+                                            <a href="{{ url('tourguide/DaftarPariwisata/' . $d->id) }}" class="btn btn-info btn-sm">
                                                 <i class="fa fa-eye"></i></a>
                                             <a href="{{ url('tourguide/DaftarPariwisata/' . $d->id) . '/edit' }}"
                                                 class="btn btn-primary btn-sm">
