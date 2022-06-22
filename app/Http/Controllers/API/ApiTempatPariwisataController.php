@@ -90,6 +90,11 @@ class ApiTempatPariwisataController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $data= TempatPariwisata::find($id);
+        $data->delete();
+        return response([
+            'message'=> 'success delete data',
+            'tempat_pariwisata'=> $data
+        ],201);
     }
 }
