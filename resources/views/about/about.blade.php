@@ -35,7 +35,7 @@
         <h3>Belum memiliki destinasi tempat pariwisata ? </h3>
         <p class="text-center">
         Bersama TripKUY anda akan mendapatkan berbagai informasi destinasi tempat pariwisata beserta tourguidenya.   </p>
-        <a class="cta-btn" href="/">Get Started</a>
+        <a class="cta-btn" href="/register">Get Started</a>
       </div>
     </section><!-- #call-to-action -->
 </body>
