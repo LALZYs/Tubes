@@ -24,6 +24,17 @@ class RadminController extends Controller
      */
     public function create(Request $request)
     {
+       //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
         $request->validate([
             'username' => 'required',
             'password' => 'required',
@@ -35,18 +46,8 @@ class RadminController extends Controller
             'password.required' => 'password harus diisi',
             'email.required' => 'email harus diisi',
             'phone_number.required' => 'phone number harus diisi',
-            'unique_code.required' => 'unique_code harus diisi'
+            'unique_code.required' => 'unique code harus diisi'
         ]);
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
         $data=new Admin;
         $data->username=$request->username;
         $data->password=$request->password;
