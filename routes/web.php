@@ -59,6 +59,7 @@ Route::get('/radmin', function () {
 Route::get('/logmin',[DashminController::class,'index'])->name('loggedmin');
 Route::get('/promin',[ProminController::class,'index'])->name('promin');
 Route::post('/radmin',[RadminController::class,'store']);
+Route::post('/radmin',[RadminController::class,'create']);
 Route::post('/loggedmin',[LadminController::class,'store']);
 Route::post('/logout',[LadminController::class,'logout']);
 Route::get('admin/tempatpariwisata/{id}/delete', [TempatPariwisataController::class, 'destroy']);

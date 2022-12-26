@@ -22,9 +22,21 @@ class RadminController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $request->validate([
+            'username' => 'required',
+            'password' => 'required',
+            'email'    => 'required',
+            'phone_number' => 'required',
+            'unique_code' => 'required'
+        ],  [
+            'username.required' => 'username harus diisi',
+            'password.required' => 'password harus diisi',
+            'email.required' => 'email harus diisi',
+            'phone_number.required' => 'phone number harus diisi',
+            'unique_code.required' => 'unique_code harus diisi'
+        ]);
     }
 
     /**

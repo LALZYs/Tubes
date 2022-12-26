@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
    <section class="login-section">
       <div class="card-login">
           <h3>Register</h3>
@@ -23,22 +23,37 @@
             <div class="form-group">
                <label for="text">Username</label>
                <input type="text" class="form-input" name="username" placeholder="Enter your username" id="text">
+               @error('username')
+                   <small class ="error" style="color:red">{{ $message }}</small>
+               @enderror
             </div>
             <div class="form-group">
                <label for="password">Password</label>
                <input type="password" class="form-input" name="password" placeholder="Enter your password" id="password">
+               @error('password')
+                   <small class ="error" style="color:red">{{ $message }}</small>
+               @enderror
             </div>
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" class="form-input" name="email" placeholder="Enter your email address" id="email">
+                @error('email')
+                   <small class ="error" style="color:red">{{ $message }}</small>
+               @enderror
             </div>
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input type="phone" class="form-input" name="phone_number" placeholder="Enter your phone number" id="phone">
+                @error('phone_number')
+                   <small class ="error" style="color:red">{{ $message }}</small>
+               @enderror
             </div>
             <div class="form-group">
                 <label for="uniquecode">Unique Code</label>
                 <input type="uniquecode" class="form-input" name="unique_code" placeholder="Enter your unique code" id="uniquecode">
+                @error('unique_code')
+                   <small class ="error" style="color:red">{{ $message }}</small>
+               @enderror
             </div>
             <button type="submit" name="submit" class="btn">Register</button>
          </form>
