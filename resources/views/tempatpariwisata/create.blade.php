@@ -18,15 +18,17 @@
                     <form method="post", action="{{url('admin/tempatpariwisata')}}" enctype="multipart/form-data">
                         @csrf
                         <table class="table table-bordered">
-                            <tr>
+                            <div class="form-group">
                                 <th>Gambar</th>
                                 <td>
                                     <input name="gambar" type="file" class="form-control"/>
+                                    @error('gambar')
+                                        <small class ="error" style="color:red">{{ $message }}</small>
+                                     @enderror
                                 </td>
-                                @error('gambar')
-                                    <small class ="error" style="color:red" font-size = "14px" >{{ $message }}</small>
-                                @enderror
-                            </tr>
+
+
+                            </div>
                             <tr>
                                 <th>Nama</th>
                                 <td>

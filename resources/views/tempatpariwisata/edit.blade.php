@@ -21,17 +21,23 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th>Gambar</th>
-                                <td><input value="{{$data->gambar}}" name="gambar" type="file" class="form-control" /></td>
-                                @error('gambar')
-                                    <small class ="error" style="color:red">{{ $message }}</small>
-                                @enderror
+                                <td>
+                                    <input value="{{$data->gambar}}" name="gambar" type="file" class="form-control" />
+                                    @error('gambar')
+                                        <small class ="error" style="color:red">{{ $message }}</small>
+                                    @enderror
+                                </td>
                             </tr>
                             <tr>
                                 <th>Nama</th>
-                                <td><input value="{{$data->nama_tempat}}" name="nama_tempat" type="text" class="form-control" /></td>
-                                @error('nama_tempat')
-                                    <small class ="error" style="color:red">{{ $message }}</small>
-                                @enderror
+                                <td>
+                                    <input value="{{$data->nama_tempat}}" name="nama_tempat" type="text" class="form-control" />
+                                    @error('nama_tempat')
+                                        <small class ="error" style="color:red">{{ $message }}</small>
+                                    @enderror
+                                </td>
+
+
                             </tr>
                             <tr>
                                 <th>Deskripsi</th>
@@ -44,18 +50,22 @@
                             <tr>
                                 <th>Lokasi</th>
                                 <td>
-                                    <textarea name="lokasi" class="form-control">{{$data->lokasi}}</textarea></td>
+                                    <textarea name="lokasi" class="form-control">{{$data->lokasi}}</textarea>
                                     @error('lokasi')
                                         <small class ="error" style="color:red">{{ $message }}</small>
                                     @enderror
+                                </td>
+
                             </tr>
                             <tr>
                                 <th>Catering</th>
                                 <td>
-                                    <textarea name="catering" class="form-control">{{$data->catering}}</textarea></td>
+                                    <textarea name="catering" class="form-control">{{$data->catering}}</textarea>
                                     @error('catering')
                                         <small class ="error" style="color:red">{{ $message }}</small>
                                     @enderror
+                                </td>
+
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">
