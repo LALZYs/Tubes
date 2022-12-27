@@ -30,8 +30,8 @@
                                 <th>Nama</th>
                                 <td><input value="{{$data->nama_tempat}}" name="nama_tempat" type="text" class="form-control" /></td>
                                 @error('nama_tempat')
-                                <small class ="error" style="color:red">{{ $message }}</small>
-                            @enderror
+                                    <small class ="error" style="color:red">{{ $message }}</small>
+                                @enderror
                             </tr>
                             <tr>
                                 <th>Deskripsi</th>
@@ -46,16 +46,16 @@
                                 <td>
                                     <textarea name="lokasi" class="form-control">{{$data->lokasi}}</textarea></td>
                                     @error('lokasi')
-                                    <small class ="error" style="color:red">{{ $message }}</small>
-                                @enderror
+                                        <small class ="error" style="color:red">{{ $message }}</small>
+                                    @enderror
                             </tr>
                             <tr>
                                 <th>Catering</th>
                                 <td>
                                     <textarea name="catering" class="form-control">{{$data->catering}}</textarea></td>
                                     @error('catering')
-                                    <small class ="error" style="color:red">{{ $message }}</small>
-                                @enderror
+                                        <small class ="error" style="color:red">{{ $message }}</small>
+                                    @enderror
                             </tr>
                             <tr>
                                 <td colspan="2" class="text-center">

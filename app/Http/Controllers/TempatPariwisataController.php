@@ -37,6 +37,19 @@ class TempatPariwisataController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'gambar' => 'required|image',
+            'nama_tempat' => 'required',
+            'deskripsi'    => 'required',
+            'lokasi' => 'required',
+            'catering' => 'required'
+        ],  [
+            'gambar.required' => 'gambar tidak boleh kosong',
+            'nama_tempat.required' => 'nama tempat tidak boleh kosong',
+            'deskripsi.required' => 'deskripsi tidak boleh kosong',
+            'lokasi.required' => 'lokasi tidak boleh kosong',
+            'catering.required' => 'catering tidak boleh kosong'
+        ]);
         // membuat model tempat pariwisata
         $data=new TempatPariwisata;
         // menerima data yang dibutuhkan sesuai yang admin inputkan
@@ -87,6 +100,19 @@ class TempatPariwisataController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'gambar' => 'required|image',
+            'nama_tempat' => 'required',
+            'deskripsi'    => 'required',
+            'lokasi' => 'required',
+            'catering' => 'required'
+        ],  [
+            'gambar.required' => 'gambar tidak boleh kosong',
+            'nama_tempat.required' => 'nama tempat tidak boleh kosong',
+            'deskripsi.required' => 'deskripsi tidak boleh kosong',
+            'lokasi.required' => 'lokasi tidak boleh kosong',
+            'catering.required' => 'catering tidak boleh kosong'
+        ]);
         $data=TempatPariwisata::find($id);
         $data->gambar=$request->file('gambar')-> store('gambar_pariwisata');
         $data->nama_tempat=$request->nama_tempat;
